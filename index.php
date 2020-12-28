@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="imgs/logo.png">
+    <style>
+            <?php require_once __DIR__ . '/css/style.css' ?>
+    </style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
+<img src="imgs/logoex.png" alt="logo">
 <body>
-    hello world!
-    <img src="imgs/logo.png" alt="Failed to load logo">
 </body>
 </html>
