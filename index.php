@@ -8,9 +8,31 @@
     <style>
             <?php require_once __DIR__ . '/css/style.css' ?>
     </style>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
-<img src="imgs/logoex.png" alt="logo">
+<header class="main-header">
+                <div class="header-container">
+                    <img src="imgs/logoex.png" alt="logo">
+                <ul class="navigation">
+                    <a href="">
+                        <li>home</li>
+                    </a>
+                    <a href="">
+                        <li>about me</li>
+                    </a>
+                    <a href="">
+                        <li>projects</li>
+                    </a>
+                    <a href="">
+                        <li>contact me</li>
+                    </a>
+                </ul>
+                </div>
+    </header>
+    <div id="particles-js"></div>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
 <body>
 </body>
 </html>

@@ -1,5 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arvo';
+}
+#particles-js{
+    background-color: #000;
+    height: 300px;
+}
+a{
+    text-decoration: none;
+}
+.main-header{
+    height: 100px;
+    background-color: #ffffff;
+}
+.header-container>img{
+    height: 100%;
+    padding: 10px;
+}
+.header-container{
+    max-width: 1300px;
+    margin: auto;
+    height: 100%;
+}
+.navigation{
+    float: right;
+    height: 100%;
+}
+.navigation a{
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0 20px;
+    font-size: 20px;
+}
+header .navigation a li{
+    display: table-cell;
+    vertical-align: middle;
+    color: black;
+    text-transform: uppercase;
 }
