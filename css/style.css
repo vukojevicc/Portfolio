@@ -1,24 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+:root{
+    --header_height: 35px;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arvo';
+    font-family: 'Arvo', sans-serif;
 }
 #particles-js{
     background-color: #000;
     height: 500px;
+    clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+    position: absolute;
+    width: 100%;
 }
 a{
     text-decoration: none;
 }
-.main-header{
+.header{
+    z-index: 999;
     height: 100px;
     width: 100%;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.63);
 }
-.header-container>img{
+.main-header{
+    background-color: rgba(255, 255, 255, 0.63);
+    top: var(--header_height);
+}
+.small-header{
+    height: var(--header_height);
+    background-color: rgba(0, 0, 0, 0.63);
+}
+.small-header-container{
+    height: 100%;
+    width: 700px;
+    margin: auto;
+}
+.header-container-img{
     height: 100%;
     padding: 10px;
 }
