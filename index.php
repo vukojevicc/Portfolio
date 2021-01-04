@@ -12,8 +12,8 @@
     <script src="js/main.js"></script>
 </head>
 <header class="small-header header">
-    <div class="small-header-container header-container">
-            <img class="header-container-img" src="imgs/logowhite.png" alt="logo">
+    <div class="small-header-container">
+            <img class="header-container-img rotate-logo" src="imgs/logowhite.png" alt="logo">
     </div>
 </header>
 <header class="main-header header">
