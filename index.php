@@ -13,7 +13,7 @@
 </head>
 <header class="small-header header">
     <div class="small-header-container">
-            <img class="header-container-img rotate-logo" src="imgs/logowhite.png" alt="logo">
+            <img class="header-container-img rotate" id="rotate-logo" src="imgs/logowhite.png" alt="logo">
     </div>
 </header>
 <header class="main-header header">
