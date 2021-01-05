@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aleksandar</title>
+    <title>Front-End Engineer</title>
     <link rel="icon" href="imgs/logo.png">
     <style>
             <?php require_once __DIR__ . '/css/style.css' ?>
@@ -14,22 +14,27 @@
 <header class="small-header header">
     <div class="small-header-container">
             <img class="header-container-img rotate" id="rotate-logo" src="imgs/logowhite.png" alt="logo">
+            <ul class="navigation">
+                    <a href="#">
+                        <li><img class="header-container-img social" src="imgs/stackoverflow.png" alt=""></li>
+                    </a>
+                </ul>
     </div>
 </header>
 <header class="main-header header">
                 <div class="header-container">
                     <img class="header-container-img" src="imgs/logoex.png" alt="logo">
                 <ul class="navigation">
-                    <a href="">
+                    <a href="#">
                         <li>home</li>
                     </a>
-                    <a href="">
+                    <a href="#">
                         <li>about me</li>
                     </a>
-                    <a href="">
+                    <a href="#">
                         <li>projects</li>
                     </a>
-                    <a href="">
+                    <a href="#">
                         <li>contact me</li>
                     </a>
                 </ul>
