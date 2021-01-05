@@ -35,7 +35,7 @@
 </header>
 <header class="main-header header">
                 <div class="header-container">
-                    <img class="header-container-img" src="imgs/logoex.png" alt="logo">
+                    <img class="header-container-img" src="imgs/logoex1.png" alt="logo">
                 <ul class="navigation">
                     <a href="#">
                         <li>home</li>
