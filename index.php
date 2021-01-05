@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Front-End Engineer</title>
+    <title>Aleksandar | Front-End Engineer</title>
     <link rel="icon" href="imgs/logo.png">
     <style>
             <?php require_once __DIR__ . '/css/style.css' ?>
@@ -12,11 +12,23 @@
     <script src="js/main.js"></script>
 </head>
 <header class="small-header header">
-    <div class="small-header-container">
-            <img class="header-container-img rotate" id="rotate-logo" src="imgs/logowhite.png" alt="logo">
+    <div class="header-container">
+            <img class="header-container-img" id="rotate-logo" src="imgs/logowhite.png" alt="logo">
             <ul class="navigation">
-                    <a href="#">
-                        <li><img class="header-container-img social" src="imgs/stackoverflow.png" alt=""></li>
+                    <a href="https://stackoverflow.com/users/13468559/aleksandar" target="_blank">
+                        <li><img class="social" src="imgs/st.png" alt=""></li>
+                    </a>
+                    <a href="https://github.com/vukojevicc/" target="_blank">
+                        <li><img class="social" src="imgs/github1.png" alt=""></li>
+                    </a>
+                    <a href="tel:+381603388389">
+                        <li><img class="social" src="imgs/phone.png" alt=""></li>
+                    </a>
+                    <a href="mailto:aleksandar.vukojevicc@gmail.com">
+                        <li><img class="social" src="imgs/email.png" alt=""></li>
+                    </a>
+                    <a href="#" target="_blank">
+                        <li><img class="social" src="imgs/linked.png" alt=""></li>
                     </a>
                 </ul>
     </div>
