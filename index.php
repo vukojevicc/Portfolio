@@ -11,24 +11,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </head>
-<header class="small-header header">
+<header class="small-header header" id="z-index">
     <div class="header-container">
             <img class="header-container-img" id="rotate-logo" src="imgs/logowhite.png" alt="logo">
             <ul class="navigation">
                     <a href="https://stackoverflow.com/users/13468559/aleksandar" target="_blank">
-                        <li><img class="social" src="imgs/st.png" alt=""></li>
+                        <li class="social-title">
+                            <img class="social" id="stack" src="imgs/st.png" alt="">
+                            <span class="social-title-text">Stack Overflow</span>
+                        </li>
                     </a>
                     <a href="https://github.com/vukojevicc/" target="_blank">
-                        <li><img class="social" src="imgs/github1.png" alt=""></li>
+                        <li class="social-title">
+                            <img class="social" id="git" src="imgs/github1.png" alt="">
+                            <span class="social-title-text">GitHub</span>
+                        </li>
                     </a>
                     <a href="tel:+381603388389">
-                        <li><img class="social" src="imgs/phone.png" alt=""></li>
+                        <li class="social-title">
+                            <img class="social" id="phone" src="imgs/phone.png" alt="">
+                            <span class="social-title-text">Phone</span>
+                        </li>
                     </a>
                     <a href="mailto:aleksandar.vukojevicc@gmail.com">
-                        <li><img class="social" src="imgs/email.png" alt=""></li>
+                        <li class="social-title">
+                            <img class="social" id="mail" src="imgs/email.png" alt="">
+                            <span class="social-title-text">Email</span>
+                        </li>
                     </a>
                     <a href="#" target="_blank">
-                        <li><img class="social" src="imgs/linked.png" alt=""></li>
+                        <li class="social-title">
+                            <img class="social" id="link" src="imgs/linked.png" alt="">
+                            <span class="social-title-text">LinkedIn</span>
+                        </li>
                     </a>
                 </ul>
     </div>
