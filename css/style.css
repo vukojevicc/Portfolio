@@ -14,8 +14,8 @@
     background-color: #000;
     height: 500px;
     clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
-    position: absolute;
     width: 100%;
+    position: relative;
 }
 a{
     text-decoration: none;
@@ -123,7 +123,8 @@ header .navigation a li{
     margin-left: -60px;
     z-index: 4;
     opacity: 0;
-    transition: opacity 1s;
+    transition: all .3s linear;
+    font-family: sans-serif;
 }
 .social-title:hover .social-title-text{
     visibility: visible;
@@ -138,4 +139,11 @@ header .navigation a li{
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent black transparent;
+}
+#particles-info{
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    left: 50%;
+    visibility: hidden;
 }

@@ -9,8 +9,10 @@
             <?php require_once __DIR__ . '/css/style.css' ?>
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js">
+    </script>
 </head>
+<body>
 <header class="small-header header" id="z-index">
     <div class="header-container">
             <img class="header-container-img" id="rotate-logo" src="imgs/logowhite.png" alt="logo">
@@ -67,9 +69,12 @@
                 </ul>
                 </div>
     </header>
-    <div id="particles-js"></div>
+    <div id="particles-js">
+    <div id="particles-info">
+        Click on area to add particles!
+    </div>
+    </div>
     <script src="js/particles.js"></script>
     <script src="js/app.js"></script>
-<body>
 </body>
 </html>
