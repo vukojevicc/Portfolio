@@ -9,7 +9,8 @@
             <?php require_once __DIR__ . '/css/style.css' ?>
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/main.js">
+    <script>
+    <?php require_once __DIR__ . '/js/main.js'; ?>
     </script>
 </head>
 <body>
@@ -53,7 +54,7 @@
 <header class="main-header header">
                 <div class="header-container">
                     <img class="header-container-img" src="imgs/logoex1.png" alt="logo">
-                <ul class="navigation">
+                <ul class="navigation" id="main-menu">
                     <a href="#">
                         <li>home</li>
                     </a>
@@ -71,7 +72,7 @@
     </header>
     <div id="particles-js">
     <div id="particles-info">
-        Click on area to add particles!
+        Click on area to add particles! <sup>&times;</sup>
     </div>
     </div>
     <script src="js/particles.js"></script>
