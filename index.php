@@ -75,6 +75,11 @@
         Click on area to add particles! <sup>&times;</sup>
     </div>
     </div>
+    <div class="technologies">
+        <h1>
+            front end focused with <br>full stack experience
+        </h1>
+    </div>
     <script src="js/particles.js"></script>
     <script src="js/app.js"></script>
 </body>
