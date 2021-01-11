@@ -160,7 +160,7 @@ header .navigation a li{
 #main-menu a{
     position: relative;
 }
-#main-menu li:after{
+#main-menu li::after{
     content: '';
     position: absolute;
     left: 50%;
@@ -174,7 +174,7 @@ header .navigation a li{
     background-color: rgba(255, 255, 255, 0.9);
     transition: transform 250ms;
 }
-#main-menu li:hover:after{
+#main-menu li:hover::after{
     transform: translateX(-50%) scaleX(1);
     -webkit-transform: translateX(-50%) scaleX(1);
 }
