@@ -10,6 +10,9 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+main{
+    padding: 5px;
+}
 #particles-js{
     background-color: #000;
     height: 500px;
@@ -178,10 +181,15 @@ header .navigation a li{
     transform: translateX(-50%) scaleX(1);
     -webkit-transform: translateX(-50%) scaleX(1);
 }
-.technologies h1{
+.technologies div{
     text-transform: uppercase;
-    margin: auto;
     text-align: center;
-    letter-spacing: 3px;
-    line-height: 50px;
+    letter-spacing: 2.7px;
+    line-height: 45px;
+    font-size: 27px;
+    transition: transform .3s linear;
+}
+.technologies div:hover{
+    transform: skew(2deg, 1deg);
+    text-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2);;
 }
