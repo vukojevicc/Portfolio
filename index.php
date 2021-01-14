@@ -80,7 +80,7 @@
     <main>
         <div class="technologies">
             <div>
-                front end focused with <br>full stack experience
+                <div>front end focused with <br>full stack experience</div>
             </div>
         </div>
         <script src="js/particles.js"></script>

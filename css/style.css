@@ -182,14 +182,19 @@ header .navigation a li{
     -webkit-transform: translateX(-50%) scaleX(1);
 }
 .technologies div{
+    display: flex;
+    justify-content: center;
+}
+.technologies div div{
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 2.7px;
     line-height: 45px;
     font-size: 27px;
     transition: transform .3s linear;
+    display: inline-block;
 }
-.technologies div:hover{
+.technologies div div:hover{
     transform: skew(2deg, 1deg);
     text-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2);;
 }
