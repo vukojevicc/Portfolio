@@ -208,11 +208,12 @@ header .navigation a li{
 }
 .menu-btn{
     position: relative;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     height: 80px;
     transition: all .5s ease-in-out;
+    float: right;
 }
 .menu-btn-burger{
     width: 50px;
@@ -251,10 +252,11 @@ header .navigation a li{
 .menu-btn.open .menu-btn-burger::after{
     transform: rotate(-45deg) translate(35px, 35px);
 }
-.li{
-    display: table-cell;
-    vertical-align: middle;
-    color: black;
-    text-transform: uppercase;
-    height: inherit;
+@media all and (max-width: 750px){
+    #main-menu{
+        display: none;
+    }
+    .menu-btn{
+        display: flex;
+    }
 }

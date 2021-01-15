@@ -1,7 +1,7 @@
 $(document).ready(function(){
     // Checking which image will be added to src attribute ↓
     function logoReplace(){ 
-        if($(window).innerWidth() < 815){
+        if($(window).innerWidth() < 957){
             $('#main-logo').attr('src', 'imgs/logo.png')
         }else{
             $('#main-logo').attr('src', 'imgs/logoex1.png')

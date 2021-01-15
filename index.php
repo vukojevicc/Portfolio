@@ -14,7 +14,6 @@
         <?php require_once __DIR__ . '/js/main.js'; ?>
     </script>
 </head>
-
 <div class="overflow">
 
     <body>
@@ -40,14 +39,10 @@
                     <a href="#">
                         <li>contact me</li>
                     </a>
-                    <a href="#">
-                        <div class="li">
-                            <div class="menu-btn">
-                                <div class="menu-btn-burger"></div>
-                            </div>
-                        </div>
-                    </a>
                 </ul>
+                <div class="menu-btn">
+                    <div class="menu-btn-burger"></div>
+                </div>
             </div>
         </header>
         <div id="particles-js">
