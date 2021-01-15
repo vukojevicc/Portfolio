@@ -16,42 +16,12 @@
 </head>
 
 <div class="overflow">
+
     <body>
         <header class="small-header header" id="z-index">
             <div class="header-container">
                 <img class="header-container-img" id="rotate-logo" src="imgs/logowhite.png" alt="logo">
-                <ul class="navigation">
-                    <a href="https://stackoverflow.com/users/13468559/aleksandar" target="_blank">
-                        <li class="social-title">
-                            <img class="social" id="stack" src="imgs/st.png" alt="">
-                            <span class="social-title-text">Stack Overflow</span>
-                        </li>
-                    </a>
-                    <a href="https://github.com/vukojevicc/" target="_blank">
-                        <li class="social-title">
-                            <img class="social" id="git" src="imgs/github1.png" alt="">
-                            <span class="social-title-text">GitHub</span>
-                        </li>
-                    </a>
-                    <a href="tel:+381603388389">
-                        <li class="social-title">
-                            <img class="social" id="phone" src="imgs/phone.png" alt="">
-                            <span class="social-title-text">Phone</span>
-                        </li>
-                    </a>
-                    <a href="mailto:aleksandar.vukojevicc@gmail.com">
-                        <li class="social-title">
-                            <img class="social" id="mail" src="imgs/email.png" alt="">
-                            <span class="social-title-text">Email</span>
-                        </li>
-                    </a>
-                    <a href="#" target="_blank">
-                        <li class="social-title">
-                            <img class="social" id="link" src="imgs/linked.png" alt="">
-                            <span class="social-title-text">LinkedIn</span>
-                        </li>
-                    </a>
-                </ul>
+                <?php include __DIR__ . '/partials/social-icons.php'; ?>
             </div>
         </header>
         <header class="main-header header">
@@ -69,6 +39,13 @@
                     </a>
                     <a href="#">
                         <li>contact me</li>
+                    </a>
+                    <a href="#">
+                        <div class="li">
+                            <div class="menu-btn">
+                                <div class="menu-btn-burger"></div>
+                            </div>
+                        </div>
                     </a>
                 </ul>
             </div>
@@ -89,4 +66,5 @@
         </main>
     </body>
 </div>
+
 </html>

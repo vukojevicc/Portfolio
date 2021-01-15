@@ -1,12 +1,14 @@
 $(document).ready(function(){
-    function zamenaLogoa(){
+    // Checking which image will be added to src attribute ↓
+    function logoReplace(){ 
         if($(window).innerWidth() < 815){
             $('#main-logo').attr('src', 'imgs/logo.png')
         }else{
             $('#main-logo').attr('src', 'imgs/logoex1.png')
         }
     }
-    zamenaLogoa();
+    logoReplace();
+    // 'click on are to add particles!' message popup ↓
     $(this).on('mousemove', function(){
         if($('#particles-js:hover').length != 0){
             $('#particles-info').css({
@@ -21,7 +23,12 @@ $(document).ready(function(){
             })
         }
 });
+// Checking which image will be added to src attribute on resize event ↓
 $(window).on('resize', function(){
-    zamenaLogoa();
+    logoReplace();
 });
+// Burger menu animation ↓
+$('.menu-btn').on('click', function(){
+    $(this).toggleClass('open');
+})
 });
