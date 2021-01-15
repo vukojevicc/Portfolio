@@ -56,7 +56,7 @@
         </header>
         <header class="main-header header">
             <div class="header-container">
-                <img class="header-container-img" src="imgs/logoex1.png" alt="logo">
+                <img id="main-logo" class="header-container-img" src="" alt="logo">
                 <ul class="navigation" id="main-menu">
                     <a href="#">
                         <li>home</li>
