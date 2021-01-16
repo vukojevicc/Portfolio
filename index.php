@@ -27,18 +27,9 @@
             <div class="header-container">
                 <img id="main-logo" class="header-container-img" src="" alt="logo">
                 <ul class="navigation" id="main-menu">
-                    <a href="#">
-                        <li>home</li>
-                    </a>
-                    <a href="#">
-                        <li>about me</li>
-                    </a>
-                    <a href="#">
-                        <li>projects</li>
-                    </a>
-                    <a href="#">
-                        <li>contact me</li>
-                    </a>
+                    <?php
+                        include __DIR__ . '/partials/main-menu.php';
+                    ?>
                 </ul>
                 <div class="menu-btn">
                     <div class="menu-btn-burger"></div>
