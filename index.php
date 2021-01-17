@@ -28,12 +28,12 @@
                 <img id="main-logo" class="header-container-img" src="" alt="logo">
                 <ul class="navigation" id="main-menu">
                     <?php
-                        include __DIR__ . '/partials/main-menu.php';
+                    include __DIR__ . '/partials/main-menu.php';
                     ?>
+                    <div class="menu-btn">
+                        <div class="menu-btn-burger"></div>
+                    </div>
                 </ul>
-                <div class="menu-btn">
-                    <div class="menu-btn-burger"></div>
-                </div>
             </div>
         </header>
         <div id="particles-js">

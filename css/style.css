@@ -128,28 +128,24 @@ header .navigation a li{
     position: absolute;
     text-transform: none;
     font-size: 13px;
-    width: 120px;
-    top: 100%;
-    left: 50%;
-    margin-left: -60px;
     z-index: 4;
     opacity: 0;
     transition: all .3s linear;
     font-family: sans-serif;
+    width: 120px;
+}
+.bottom-tooltip{
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+.left-tooltip{
+    top: 25%;
+    right: 105%;
 }
 .social-title:hover .social-title-text{
     visibility: visible;
     opacity: 1;
-}
-.social-title .social-title-text::after{
-    content: " ";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent black transparent;
 }
 #particles-info{
     position: absolute;
@@ -214,6 +210,7 @@ header .navigation a li{
     height: 80px;
     transition: all .5s ease-in-out;
     float: right;
+    padding-right: 20px;
 }
 .menu-btn-burger{
     width: 50px;
@@ -253,8 +250,12 @@ header .navigation a li{
     transform: rotate(-45deg) translate(35px, 35px);
 }
 @media all and (max-width: 957px){
-    #main-menu{
+    #main-menu a{
         display: none;
+    }
+    #main-menu{
+        display: grid;
+        place-items: center;
     }
     .menu-btn{
         display: flex;
