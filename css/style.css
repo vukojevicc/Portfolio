@@ -253,7 +253,7 @@ header .navigation a li{
 .menu-btn.open .menu-btn-burger::after{
     transform: rotate(-45deg) translate(35px, 35px);
 }
-@media all and (max-width: 957px){
+@media(max-width: 957px){
     #main-menu a{
         display: none;
     }
@@ -265,7 +265,7 @@ header .navigation a li{
         display: flex;
     }
 }
-@media all and (max-width: 323px){
+@media(max-width: 323px){
     #email{
         display: none;
     }
