@@ -274,7 +274,7 @@ header .navigation a li{
     position: absolute;
     z-index: 2;
     right: 0;
-    transform: translateX(120%);
+    transform: translateX(100%);
     background: transparent;
     transition: all .5s ease-in-out;
     margin: 3px 3px 0 0;
@@ -284,8 +284,10 @@ header .navigation a li{
     color: black;
     padding: 20px;
     text-align: center;
-    background: var(--menu-header-background);
     transition: all .3s ease-in-out;
+}
+.side-menu-li-background{
+    background: var(--menu-header-background);
 }
 .side-menu li:hover{
     background: transparent;

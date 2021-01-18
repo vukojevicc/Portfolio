@@ -41,5 +41,6 @@ $(document).ready(function () {
     $('.menu-btn').on('click', function () {
         $(this).toggleClass('open');
         $('.side-menu').toggleClass('side-menu-open');
+        $('.side-menu li').toggleClass('side-menu-li-background');
     })
 });
