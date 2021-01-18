@@ -40,5 +40,6 @@ $(document).ready(function () {
     // Burger menu animation ↓
     $('.menu-btn').on('click', function () {
         $(this).toggleClass('open');
+        $('.side-menu').toggleClass('side-menu-open');
     })
 });

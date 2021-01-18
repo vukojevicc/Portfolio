@@ -4,6 +4,7 @@
     --logo-trans-speed: 1s ease-in-out;
     --social-logo-opacity: 0.6;
     --burger-menu-color: #000;
+    --menu-header-background: rgba(255, 255, 255, 0.63);
 }
 *{
     margin: 0;
@@ -40,7 +41,7 @@ a{
     position: absolute;
 }
 .main-header{
-    background-color: rgba(255, 255, 255, 0.63);
+    background-color: var(--menu-header-background);
     top: var(--header_height);
     text-shadow: 0 2px 5px rgba(0, 0, 0, .2);
 }
@@ -51,6 +52,9 @@ a{
 .header-container-img{
     height: inherit;
     padding: 10px;
+}
+li{
+    list-style-type: none;
 }
 header .header-container-img:hover{
     transform: scale(1.1);
@@ -260,4 +264,33 @@ header .navigation a li{
     .menu-btn{
         display: flex;
     }
+}
+@media all and (max-width: 323px){
+    #email{
+        display: none;
+    }
+}
+.side-menu{
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    transform: translateX(120%);
+    background: transparent;
+    transition: all .5s ease-in-out;
+    margin: 3px 3px 0 0;
+}
+.side-menu li{
+    text-transform: uppercase;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    background: var(--menu-header-background);
+    transition: all .3s ease-in-out;
+}
+.side-menu li:hover{
+    background: transparent;
+    color: white;
+}
+.side-menu-open{
+    transform: translateX(0%);
 }

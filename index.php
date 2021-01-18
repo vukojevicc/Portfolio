@@ -35,6 +35,13 @@
                     </div>
                 </ul>
             </div>
+            <aside class="side-menu">
+                <ul>
+                    <?php
+                    include __DIR__ . '/partials/main-menu.php';
+                    ?>
+                </ul>
+            </aside>
         </header>
         <div id="particles-js">
             <div id="particles-info">

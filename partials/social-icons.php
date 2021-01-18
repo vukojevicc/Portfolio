@@ -17,7 +17,7 @@
             <span class="social-title-text bottom-tooltip">Phone</span>
         </li>
     </a>
-    <a href="mailto:aleksandar.vukojevicc@gmail.com">
+    <a href="mailto:aleksandar.vukojevicc@gmail.com" id="email">
         <li class="social-title">
             <img class="social" id="mail" src="imgs/email.png" alt="">
             <span class="social-title-text bottom-tooltip">Email</span>
