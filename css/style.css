@@ -93,7 +93,7 @@ header .navigation a li{
 }
 .social{
     border-radius: 50%;
-    transition: all .2s linear;
+    transition: all .2s ease-in-out;
     height: 80%;
     display: block;
 }
@@ -164,11 +164,11 @@ header .navigation a li{
 #particles-js:hover #particles-info{
     opacity: 1;
 }
+#main-menu li{
+    transition: color .3s ease-in-out;
+}
 #main-menu li:hover{
     color: white;
-    transition: all .4s;
-    -webkit-transition: all .4s;
-    -o-transition: all .4s;
 }
 #main-menu a{
     position: relative;
