@@ -166,7 +166,9 @@ header .navigation a li{
 }
 #main-menu li:hover{
     color: white;
-    transition: .4s;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
 }
 #main-menu a{
     position: relative;
