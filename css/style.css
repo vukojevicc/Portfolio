@@ -197,7 +197,7 @@ header .navigation a li{
     letter-spacing: 2.7px;
     line-height: 45px;
     font-size: 27px;
-    transition: transform .3s linear;
+    transition: transform .1s linear;
     display: inline-block;
 }
 .technologies div div:hover{
@@ -251,7 +251,7 @@ header .navigation a li{
 .menu-btn.open .menu-btn-burger::after{
     transform: rotate(-45deg) translate(35px, 35px);
 }
-@media(max-width: 957px){
+@media only screen and (max-width: 957px){
     #main-menu a{
         display: none;
     }
@@ -263,7 +263,7 @@ header .navigation a li{
         display: flex;
     }
 }
-@media(max-width: 323px){
+@media only screen and (max-width: 323px){
     #email{
         display: none;
     }
