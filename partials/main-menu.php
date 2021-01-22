@@ -1,7 +1,7 @@
 <a href="#">
     <li>home</li>
 </a>
-<a href="#">
+<a href="#technologies">
     <li>about me</li>
 </a>
 <a href="#">

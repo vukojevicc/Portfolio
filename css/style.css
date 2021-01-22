@@ -5,6 +5,7 @@
     --social-logo-opacity: 0.6;
     --burger-menu-color: #000;
     --menu-header-background: rgba(255, 255, 255, 0.63);
+    --document-width: 1100px;
 }
 *{
     margin: 0;
@@ -14,19 +15,30 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 .overflow{
     position: relative;
     overflow-x: hidden;
 }
-main{
-    padding: 5px;
+.main-container{
+    background-image: url('imgs/background-portfolio1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-attachment: fixed;
+    height: 2000px;
+    padding: 6vw 2vw 2vw 2vw;
 }
 #particles-js{
     background-color: #000;
     height: 500px;
-    clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
     width: 100%;
     position: relative;
+    margin-bottom: -5vw;
 }
 a{
     text-decoration: none;
@@ -69,7 +81,7 @@ header .header-container-img{
     transform: rotate(360deg);
 }
 .header-container{
-    max-width: 1100px;
+    max-width: var(--document-width);
     margin: auto;
     height: inherit;
 }
@@ -187,11 +199,16 @@ header .navigation a li{
 #main-menu li:hover::after{
     transform: translateX(-50%) scaleX(1);
 }
-.technologies div{
+.technologies{
+    max-width: var(--document-width);
+    margin: auto;
+}
+.technologies .flex-heading{
     display: flex;
     justify-content: center;
+    margin-bottom: 37px;
 }
-.technologies div div{
+.technologies .flex-heading .technologies-heading{
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 2.7px;
@@ -200,7 +217,7 @@ header .navigation a li{
     transition: transform .1s linear;
     display: inline-block;
 }
-.technologies div div:hover{
+.technologies .flex-heading .technologies-heading:hover{
     transform: skew(2deg, 1deg);
     text-shadow: 0 2px 5px rgba(0, 0, 0, .2);
 }
@@ -268,6 +285,11 @@ header .navigation a li{
         display: none;
     }
 }
+@media only screen and (max-width: 618px){
+    .about-me-grid{
+        flex-wrap: wrap;
+    }
+}
 .side-menu{
     position: absolute;
     z-index: 2;
@@ -293,4 +315,21 @@ header .navigation a li{
 }
 .side-menu-open{
     transform: translateX(0%);
+}
+.fade {
+    opacity: 0;
+}
+.about-me-grid{
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(5px 10px 18px #888888)
+}
+.about-me-section{
+    text-align: center;
+    padding: 13px;
+    width: calc(var(--document-width)/3);
+}
+.about-me-grid img{
+    width: 100%;
+    clip-path: ellipse(48% 50% at 50% 50%);
 }

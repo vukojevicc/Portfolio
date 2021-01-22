@@ -9,7 +9,7 @@ $(document).ready(function () {
     }
     logoReplace();
     // Checking which class will be added to linkedin social icon
-    function linkedinTooltip(){
+    function linkedinTooltip() {
         if ($(window).innerWidth() < 1169) {
             $('#link-text').addClass('left-tooltip').removeClass('bottom-tooltip');
         } else {
@@ -42,5 +42,26 @@ $(document).ready(function () {
         $(this).toggleClass('open');
         $('.side-menu').toggleClass('side-menu-open');
         $('.side-menu li').toggleClass('side-menu-li-background');
+    })
+    // fade in heading for about me section ↓
+    $(window).scroll(function () {
+        var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+        $(".fade").each(function () {
+            /* Check the location of each desired element */
+            var objectBottom = $(this).offset().top + $(this).outerHeight();
+            /* If the element is completely within bounds of the window, fade it in */
+            if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                if ($(this).css("opacity") == 0) {
+                    if ($(this).hasClass('fade1')) {
+                        $(this).fadeTo(700, 1);
+                    }
+                    else if ($(this).hasClass('fade2')) {
+                        $(this).fadeTo(1000, 1);
+                    } else {
+                        $(this).fadeTo(1300, 1);
+                    }
+                }
+            }
+        });
     })
 });

@@ -49,13 +49,20 @@
             </div>
         </div>
         <main>
-            <div class="technologies">
-                <div>
-                    <div>front end focused with <br>full stack experience</div>
+            <div class="main-container">
+                <div class="technologies" id="technologies">
+                    <div class="flex-heading">
+                        <div class="technologies-heading">front end focused with <br>full stack experience</div>
+                    </div>
+                    <div class="about-me-grid">
+                        <div class="about-me-section about-me-section-img fade fade1"><img src="imgs/me.jpeg" alt="My image"></div>
+                        <div class="about-me-section fade fade2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi architecto, sunt officiis pariatur beatae magni! Dolore magnam similique consequuntur cupiditate, quidem laudantium unde delectus voluptate rerum! Dolores ipsam unde commodi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, consequatur. Velit corporis autem, aliquam nam esse repudiandae error quam nostrum, quaerat tenetur dolorum id magnam repellendus deleniti maiores. Quisquam, beatae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, quasi a! Rem delectus, quibusdam ipsum, neque quisquam ullam omnis id inventore sunt impedit tempore sint saepe eos ea. Temporibus, eum?</div>
+                        <div class="about-me-section fade fade3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi architecto, sunt officiis pariatur beatae magni! Dolore magnam similique consequuntur cupiditate, quidem laudantium unde delectus voluptate rerum! Dolores ipsam unde commodi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus non laudantium iste corporis beatae debitis eius fugit repudiandae quis voluptates distinctio quisquam autem molestias, neque atque aliquid impedit minima repellat! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, fuga! Nostrum veritatis eligendi sequi fuga sapiente modi. Reprehenderit voluptatem consequuntur nobis, illum facilis molestias asperiores quaerat iusto et, excepturi tempora?</div>
+                    </div>
                 </div>
+                <script src="js/particles.js"></script>
+                <script src="js/app.js"></script>
             </div>
-            <script src="js/particles.js"></script>
-            <script src="js/app.js"></script>
         </main>
     </body>
 </div>
