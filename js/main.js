@@ -46,20 +46,19 @@ $(document).ready(function () {
     // fade in heading for about me section ↓
     $(window).scroll(function () {
         var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+        // fade in fixed small header ↓
+        if($(this).scrollTop() > 200){
+            $('.small-header').addClass('fixed');
+        }else{
+            $('.small-header').removeClass('fixed');
+        }
         $(".fade").each(function () {
             /* Check the location of each desired element */
             var objectBottom = $(this).offset().top + $(this).outerHeight();
             /* If the element is completely within bounds of the window, fade it in */
             if (objectBottom < windowBottom) { //object comes into view (scrolling down)
                 if ($(this).css("opacity") == 0) {
-                    if ($(this).hasClass('fade1')) {
                         $(this).fadeTo(700, 1);
-                    }
-                    else if ($(this).hasClass('fade2')) {
-                        $(this).fadeTo(1000, 1);
-                    } else {
-                        $(this).fadeTo(1300, 1);
-                    }
                 }
             }
         });

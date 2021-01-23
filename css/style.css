@@ -52,6 +52,20 @@ a{
     width: 100%;
     position: absolute;
 }
+.fixed{
+    position: fixed;
+    animation: opacity_show .3s linear;
+    background-color: rgba(0, 0, 0, .9)!important;
+    box-shadow: 0px 3px 18px 0px #000000;
+}
+@keyframes opacity_show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 .main-header{
     background-color: var(--menu-header-background);
     top: var(--header_height);
