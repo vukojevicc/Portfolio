@@ -298,14 +298,15 @@ header .navigation a li{
         display: flex;
     }
 }
-@media only screen and (max-width: 323px){
+@media only screen and (max-width: 340px){
     #email{
         display: none;
     }
 }
-@media only screen and (max-width: 618px){
+@media only screen and (max-width: 933px){
     .about-me-grid{
         flex-wrap: wrap;
+        flex-direction: column;
     }
 }
 .side-menu{
@@ -341,12 +342,11 @@ header .navigation a li{
     display: flex;
     justify-content: center;
     align-items: center;
-    filter: drop-shadow(5px 10px 18px #888888)
+    filter: drop-shadow(5px 10px 18px #888888);
 }
 .about-me-section{
     text-align: center;
     padding: 13px;
-    width: calc(var(--document-width)/3);
 }
 .about-me-grid img{
     width: 100%;
@@ -363,6 +363,7 @@ header .navigation a li{
     font-size: 18px;
     text-align: left;
     border-collapse: collapse;
+    margin: auto;
 }
 .about-me-grid th, td {
     border-bottom: 1px solid black;
@@ -370,4 +371,10 @@ header .navigation a li{
 }
 th{
     text-align: center;
+}
+.about-me-section table td:first-child{
+    padding-right: 10px;
+}
+.about-me-section table a{
+    color: rgb(2, 199, 2);
 }

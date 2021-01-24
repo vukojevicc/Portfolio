@@ -19,14 +19,10 @@
     </tr>
     <tr>
         <td>Languages:</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Email:</td>
-        <td></td>
+        <td>Serbian, English</td>
     </tr>
     <tr>
         <td>Phone:</td>
-        <td></td>
+        <td><a href="tel:+381603388389">+381 60 33 88 389</a></td>
     </tr>
 </table>

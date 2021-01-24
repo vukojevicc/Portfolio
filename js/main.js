@@ -17,6 +17,21 @@ $(document).ready(function () {
         }
     }
     linkedinTooltip();
+    // Checking which width property to asign to about me sections ↓
+    function aboutMeSectionWidth() {
+        if ($(window).innerWidth() > 900) {
+            $('.about-me-section').css({
+                'width': 'calc(var(--document-width)/3)',
+                'max-width': ''
+            });
+        }else{
+            $('.about-me-section').css({
+                'max-width': 'calc(var(--document-width)/3)',
+                'width': ''
+            })
+        }
+    }
+    aboutMeSectionWidth();
     // 'click on are to add particles!' message popup ↓
     $(this).on('mousemove', function () {
         if ($('#particles-js:hover').length != 0) {
@@ -36,6 +51,7 @@ $(document).ready(function () {
     $(window).on('resize', function () {
         logoReplace();
         linkedinTooltip();
+        aboutMeSectionWidth();
     });
     // Burger menu animation ↓
     $('.menu-btn').on('click', function () {
@@ -43,13 +59,19 @@ $(document).ready(function () {
         $('.side-menu').toggleClass('side-menu-open');
         $('.side-menu li').toggleClass('side-menu-li-background');
     })
+    // Close menu button burger and fade out side menu on nav item click ↓
+    $('aside a').on('click', function () {
+        $('.menu-btn').removeClass('open');
+        $('.side-menu').removeClass('side-menu-open');
+        $('.side-menu li').removeClass('side-menu-li-background');
+    })
     // fade in heading for about me section ↓
     $(window).scroll(function () {
         var windowBottom = $(this).scrollTop() + $(this).innerHeight();
         // fade in fixed small header ↓
-        if($(this).scrollTop() > 200){
+        if ($(this).scrollTop() > 200) {
             $('.small-header').addClass('fixed');
-        }else{
+        } else {
             $('.small-header').removeClass('fixed');
         }
         $(".fade").each(function () {
@@ -58,7 +80,7 @@ $(document).ready(function () {
             /* If the element is completely within bounds of the window, fade it in */
             if (objectBottom < windowBottom) { //object comes into view (scrolling down)
                 if ($(this).css("opacity") == 0) {
-                        $(this).fadeTo(700, 1);
+                    $(this).fadeTo(700, 1);
                 }
             }
         });
@@ -66,6 +88,6 @@ $(document).ready(function () {
     // Getting current age for info section ↓
     var birth = new Date(1997, 6, 25, 12, 20);
     var today = new Date();
-    var age = (today - birth)/3.154e+10;
+    var age = (today - birth) / 3.154e+10;
     $('#age').html(Math.floor(age));
 });
