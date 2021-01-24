@@ -63,4 +63,9 @@ $(document).ready(function () {
             }
         });
     })
+    // Getting current age for info section ↓
+    var birth = new Date(1997, 6, 25, 12, 20);
+    var today = new Date();
+    var age = (today - birth)/3.154e+10;
+    $('#age').html(Math.floor(age));
 });

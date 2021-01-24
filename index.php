@@ -55,9 +55,21 @@
                         <div class="technologies-heading">front end focused with <br>full stack experience</div>
                     </div>
                     <div class="about-me-grid">
-                        <div class="about-me-section fade">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi architecto, sunt officiis pariatur beatae magni! Dolore magnam similique consequuntur cupiditate, quidem laudantium unde delectus voluptate rerum! Dolores ipsam unde commodi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, consequatur. Velit corporis autem, aliquam nam esse repudiandae error quam nostrum, quaerat tenetur dolorum id magnam repellendus deleniti maiores. Quisquam, beatae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, quasi a! Rem delectus, quibusdam ipsum, neque quisquam ullam omnis id inventore sunt impedit tempore sint saepe eos ea. Temporibus, eum?</div>
+                        <div class="about-me-section fade">
+                            <h2>
+                                About me
+                            </h2>
+                            <p>
+                                Hi! my name is Aleksandar, tenacious programmer eager for new knowledge in web development industry. I love witing JavaScript and PHP while randomly switching channels on <a href="https://www.youtube.com/watch?v=BD_guK9b64k" target="_blank">spinnin' tv live</a>.
+                            </p>
+                            <p>
+                                When not working, I like to research for new, better and easier ways to implement my programming ideas, play basketball and enjoy life.
+                            </p>
+                        </div>
                         <div class="about-me-section about-me-section-img fade"><img src="imgs/me.jpeg" alt="My image"></div>
-                        <div class="about-me-section fade">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi architecto, sunt officiis pariatur beatae magni! Dolore magnam similique consequuntur cupiditate, quidem laudantium unde delectus voluptate rerum! Dolores ipsam unde commodi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus non laudantium iste corporis beatae debitis eius fugit repudiandae quis voluptates distinctio quisquam autem molestias, neque atque aliquid impedit minima repellat! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, fuga! Nostrum veritatis eligendi sequi fuga sapiente modi. Reprehenderit voluptatem consequuntur nobis, illum facilis molestias asperiores quaerat iusto et, excepturi tempora?</div>
+                        <div class="about-me-section fade">
+                        <?php include __DIR__ . '/partials/basic-info.php'; ?>
+                        </div>
                     </div>
                 </div>
                 <script src="js/particles.js"></script>
