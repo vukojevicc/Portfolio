@@ -390,5 +390,6 @@ th{
     padding: 5px;
 }
 #jump-to-top:hover{
-    background-color: #616161;
+    background-color: #000;
+    transform: scale(2, 2);
 }
