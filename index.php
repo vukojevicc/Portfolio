@@ -18,7 +18,7 @@
 
     <body>
         <header class="small-header header" id="z-index">
-            <div class="header-container">
+            <div class="header-container" id="top">
                 <img class="header-container-img" id="rotate-logo" src="imgs/logowhite.png" alt="logo">
                 <?php include __DIR__ . '/partials/social-icons.php'; ?>
             </div>
@@ -68,10 +68,13 @@
                         </div>
                         <div class="about-me-section about-me-section-img fade"><img src="imgs/me.jpeg" alt="My image"></div>
                         <div class="about-me-section fade">
-                        <?php include __DIR__ . '/partials/basic-info.php'; ?>
+                            <?php include __DIR__ . '/partials/basic-info.php'; ?>
                         </div>
                     </div>
                 </div>
+                <a href="#particles-js" id="jump-to-top">
+                    <img src="imgs/rocket.png" alt="jump to top">
+                </a>
                 <script src="js/particles.js"></script>
                 <script src="js/app.js"></script>
             </div>

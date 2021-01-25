@@ -374,3 +374,21 @@ th{
 .about-me-section table a{
     color: rgb(2, 199, 2);
 }
+#jump-to-top{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    visibility: hidden;
+    transform: translateY(85px);
+    transition: all .4s ease-in-out;
+    border: 1px solid #616161;
+    border-radius: 50%;
+}
+#jump-to-top img{
+    height: 70px;
+    width: 70px;
+    padding: 5px;
+}
+#jump-to-top:hover{
+    background-color: #616161;
+}

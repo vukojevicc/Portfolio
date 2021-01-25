@@ -32,6 +32,18 @@ $(document).ready(function () {
         }
     }
     aboutMeSectionWidth();
+    function rocketIcon(){
+        if($(window).innerWidth() > 1215){
+            $('#jump-to-top').css({
+                'visibility': 'visible'
+            })
+        }else{
+            $('#jump-to-top').css({
+                'visibility': 'hidden'
+            })
+        }
+    }
+    rocketIcon();
     // 'click on are to add particles!' message popup ↓
     $(this).on('mousemove', function () {
         if ($('#particles-js:hover').length != 0) {
@@ -52,6 +64,7 @@ $(document).ready(function () {
         logoReplace();
         linkedinTooltip();
         aboutMeSectionWidth();
+        rocketIcon();
     });
     // Burger menu animation ↓
     $('.menu-btn').on('click', function () {
@@ -71,8 +84,14 @@ $(document).ready(function () {
         // fade in fixed small header ↓
         if ($(this).scrollTop() > 200) {
             $('.small-header').addClass('fixed');
+            $('#jump-to-top').css({
+                'transform': 'translateY(0)'
+            });
         } else {
             $('.small-header').removeClass('fixed');
+            $('#jump-to-top').css({
+                'transform': 'translateY(100px)'
+            });
         }
         $(".fade").each(function () {
             /* Check the location of each desired element */
