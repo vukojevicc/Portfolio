@@ -87,7 +87,27 @@ $(document).ready(function () {
     })
     // Getting current age for info section ↓
     var birth = new Date(1997, 6, 25, 12, 20);
-    var today = new Date();
-    var age = (today - birth) / 3.154e+10;
+    var age = (new Date() - birth) / 3.154e+10;
     $('#age').html(Math.floor(age));
+    $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, 'swing', function(){
+    
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
 });
