@@ -13,6 +13,7 @@
     <script>
         <?php require_once __DIR__ . '/js/main.js'; ?>
     </script>
+    <script src="https://kit.fontawesome.com/6daab8fd44.js" crossorigin="anonymous"></script>
 </head>
 <div class="overflow">
 
@@ -74,7 +75,7 @@
                 <?php include __DIR__ . '/partials/carousel.php'; ?>
             </div>
             <a href="#particles-js" id="jump-to-top">
-                <img src="imgs/rocket.png" alt="jump to top">
+                <i class="fas fa-rocket fa-2x"></i>
             </a>
             <script src="js/particles.js"></script>
             <script src="js/app.js"></script>

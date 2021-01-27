@@ -113,32 +113,8 @@ header .navigation a li{
     text-transform: uppercase;
     height: inherit;
 }
-.social{
-    border-radius: 50%;
-    transition: all .2s ease-in-out;
-    height: 80%;
-    display: block;
-}
-.social:hover{
-    transform: scale(1.2);
-}
 .small-header a{
     padding: 0 7px;
-}
-#stack:hover{
-    background-color: rgba(243, 122, 32, var(--social-logo-opacity));
-}
-#git:hover{
-    background-color: rgba(51, 153, 255, var(--social-logo-opacity));
-}
-#phone:hover{
-    background-color: rgba(63, 127, 0, var(--social-logo-opacity));
-}
-#mail:hover{
-    background-color: rgba(255, 200, 41, var(--social-logo-opacity));
-}
-#link:hover{
-    background-color: rgba(215, 187, 135, var(--social-logo-opacity));
 }
 .social-title{
     position: relative;
@@ -146,7 +122,7 @@ header .navigation a li{
 }
 .social-title .social-title-text{
     visibility: hidden;
-    background-image: var(--theme-background);
+    background-color: black;
     color: white;
     text-align: center;
     padding: 5px 0;
@@ -371,12 +347,34 @@ th{
     visibility: hidden;
     transform: translateY(100px);
 }
-#jump-to-top img{
-    height: 70px;
-    width: 70px;
-    padding: 5px;
+#jump-to-top i{
+    transform: rotate(-45deg);
+    height: 30px;
+    width: 30px;
+}
+.fa-rocket{
+    color: var(--menu-color);
+    transition: all .26s ease-in-out;
+}
+.fa-rocket:hover{
+    color: #0909ad;
 }
 .carousel{
     height: 500px;
     background-image: var(--theme-background);
+}
+.fa-stack-overflow{
+    color: orange;
+}
+.fa-github{
+    color: lightgray;
+}
+.fa-phone{
+    color: lime;
+}
+.fa-envelope{
+    color: yellow;
+}
+.fa-linkedin-in{
+    color: lightblue;
 }

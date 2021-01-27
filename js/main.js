@@ -11,9 +11,9 @@ $(document).ready(function () {
     // Checking which class will be added to linkedin social icon
     function linkedinTooltip() {
         if ($(window).innerWidth() < 1169) {
-            $('#link-text').addClass('left-tooltip').removeClass('bottom-tooltip');
+            $('.social-title-text:last-of-type').addClass('left-tooltip').removeClass('bottom-tooltip');
         } else {
-            $('#link-text').addClass('bottom-tooltip').removeClass('left-tooltip');
+            $('.social-title-text:last-of-type').addClass('bottom-tooltip').removeClass('left-tooltip');
         }
     }
     linkedinTooltip();
