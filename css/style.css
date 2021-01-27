@@ -207,6 +207,7 @@ header .navigation a li{
 .technologies .flex-heading .technologies-heading{
     background: var(--theme-background);
    -webkit-background-clip: text;
+   background-clip: text;
     color: transparent;
     text-transform: uppercase;
     text-align: center;
