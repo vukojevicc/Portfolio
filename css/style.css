@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 :root{
-    --header_height: 50px;
     --logo-trans-speed: 1s ease-in-out;
     --social-logo-opacity: 0.6;
-    --burger-menu-color: #000;
-    --menu-header-background: rgba(255, 255, 255, 0.63);
+    --menu-header-background: transparent;
     --document-width: 1100px;
+    --theme-background: linear-gradient(to right, #0909ad, #05b8db);
+    --menu-color: #01014b;
+    color: #777;
 }
 *{
     margin: 0;
@@ -20,19 +21,15 @@
     overflow-x: hidden;
 }
 ::selection{
-    background-color: rgba(0,0,0,0.7);
+    background-color: #01014b;
     color: white;
 }
 .main-container-technologies{
-    background-image: url('imgs/background-portfolio1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #f7f7f7;
     width: 100%;
-    background-attachment: fixed;
 }
 #particles-js{
-    background-color: #000;
+    background-image: var(--theme-background);
     height: 500px;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
     width: 100%;
@@ -54,7 +51,7 @@ a{
 .fixed{
     position: fixed;
     animation: opacity_show .3s linear;
-    background-color: rgba(0, 0, 0, .9)!important;
+    background-color:var(--theme-background);
     box-shadow: 0px 3px 18px 0px #000000;
 }
 @keyframes opacity_show{
@@ -67,12 +64,10 @@ a{
 }
 .main-header{
     background-color: var(--menu-header-background);
-    top: var(--header_height);
     text-shadow: 0 2px 5px rgba(0, 0, 0, .2);
 }
 .small-header{
-    height: var(--header_height);
-    background-color: rgba(0, 0, 0, 0.63);
+    height: 50px;
 }
 .header-container-img{
     height: inherit;
@@ -112,7 +107,7 @@ header .header-container-img{
 header .navigation a li{
     display: table-cell;
     vertical-align: middle;
-    color: black;
+    color: var(--menu-color);
     text-transform: uppercase;
     height: inherit;
 }
@@ -176,19 +171,6 @@ header .navigation a li{
     visibility: visible;
     opacity: 1;
 }
-#particles-info{
-    position: absolute;
-    top: 50%;
-    color: #fff;
-    left: 50%;
-    visibility: hidden;
-    cursor: pointer;
-    transition: all .3s linear;
-    opacity: 0;
-}
-#particles-js:hover #particles-info{
-    opacity: 1;
-}
 #main-menu li{
     transition: color .3s ease-in-out;
 }
@@ -223,6 +205,9 @@ header .navigation a li{
     margin-bottom: 37px;
 }
 .technologies .flex-heading .technologies-heading{
+    background: var(--theme-background);
+   -webkit-background-clip: text;
+    color: transparent;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 2.7px;
@@ -248,7 +233,7 @@ header .navigation a li{
 .menu-btn-burger{
     width: 50px;
     height: 6px;
-    background: var(--burger-menu-color);
+    background: var(--menu-color);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
     transition: all .5s ease-in-out;
@@ -259,7 +244,7 @@ header .navigation a li{
     position: absolute;
     width: 50px;
     height: 6px;
-    background: var(--burger-menu-color);
+    background: var(--menu-color);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
     transition: all .5s ease-in-out;
@@ -316,7 +301,7 @@ header .navigation a li{
 }
 .side-menu li{
     text-transform: uppercase;
-    color: black;
+    color: var(--menu-color);
     padding: 20px;
     text-align: center;
     transition: all .3s ease-in-out;
@@ -325,7 +310,6 @@ header .navigation a li{
     background: var(--menu-header-background);
 }
 .side-menu li:hover{
-    background: transparent;
     color: white;
 }
 .side-menu-open{
@@ -338,11 +322,15 @@ header .navigation a li{
     display: flex;
     justify-content: center;
     align-items: center;
-    filter: drop-shadow(5px 10px 18px #888888);
 }
 .about-me-section{
     text-align: center;
     padding: 13px;
+}
+.about-me-section-img{
+    filter: drop-shadow(5px 10px 18px #888888);
+    position: relative;
+    z-index: 999;
 }
 .about-me-grid img{
     width: 100%;
@@ -362,7 +350,7 @@ header .navigation a li{
     margin: auto;
 }
 .about-me-grid th, td {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--menu-color);
     padding: 10px 0;
 }
 th{
@@ -387,6 +375,6 @@ th{
     padding: 5px;
 }
 .carousel{
-    height: 300px;
-    background-color: #000;
+    height: 500px;
+    background-image: var(--theme-background);
 }

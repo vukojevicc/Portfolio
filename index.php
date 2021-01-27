@@ -44,9 +44,6 @@
             </aside>
         </header>
         <div id="particles-js">
-            <div id="particles-info">
-                Click on area to add particles! <sup>&times;</sup>
-            </div>
         </div>
         <main>
             <div class="main-container-technologies">

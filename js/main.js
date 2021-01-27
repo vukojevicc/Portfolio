@@ -32,62 +32,19 @@ $(document).ready(function () {
         }
     }
     aboutMeSectionWidth();
-    function rocketIcon() {
-        if ($(window).innerWidth() > 1215) {
-            $('#jump-to-top').css({
-                'visibility': 'visible'
-            })
-        } else {
-            $('#jump-to-top').css({
-                'visibility': 'hidden'
-            })
-        }
-    }
-    rocketIcon();
-    // 'click on are to add particles!' message popup ↓
-    $(this).on('mousemove', function () {
-        if ($('#particles-js:hover').length != 0) {
-            $('#particles-info').css({
-                'visibility': 'visible'
-            })
-            $('#particles-info').on('click', function () {
-                $(this).remove();
-            })
-        } else {
-            $('#particles-info').css({
-                'visibility': 'hidden'
-            })
-        }
-    });
-    // All functions on resize ↓
-    $(window).on('resize', function () {
-        logoReplace();
-        linkedinTooltip();
-        aboutMeSectionWidth();
-        rocketIcon();
-    });
-    // Burger menu animation ↓
-    $('.menu-btn').on('click', function () {
-        $(this).toggleClass('open');
-        $('.side-menu').toggleClass('side-menu-open');
-        $('.side-menu li').toggleClass('side-menu-li-background');
-    })
-    // Close menu button burger and fade out side menu on nav item click ↓
-    $('aside a').on('click', function () {
-        $('.menu-btn').removeClass('open');
-        $('.side-menu').removeClass('side-menu-open');
-        $('.side-menu li').removeClass('side-menu-li-background');
-    })
-    // fade in fixed small header ↓
-    $(window).scroll(function () {
+    function allOnScrollEvents() {
         var windowBottom = $(this).scrollTop() + $(this).innerHeight();
         if ($(this).scrollTop() > 200) {
-            $('.small-header').addClass('fixed');
+            $('.small-header').addClass('fixed').css({
+                'display': 'block'
+            });
             $('#jump-to-top').css({
                 'transform': 'translateY(0)'
             });
         } else {
-            $('.small-header').removeClass('fixed');
+            $('.small-header').removeClass('fixed').css({
+                'display': 'none'
+            });;
             $('#jump-to-top').css({
                 'transform': 'translateY(100px)'
             });
@@ -102,6 +59,41 @@ $(document).ready(function () {
                 }
             }
         });
+    }
+    allOnScrollEvents();
+    function rocketIcon() {
+        if ($(window).innerWidth() > 1215) {
+            $('#jump-to-top').css({
+                'visibility': 'visible'
+            })
+        } else {
+            $('#jump-to-top').css({
+                'visibility': 'hidden'
+            })
+        }
+    }
+    rocketIcon();
+    // All functions on resize ↓
+    $(window).on('resize', function () {
+        logoReplace();
+        linkedinTooltip();
+        aboutMeSectionWidth();
+        rocketIcon();
+    });
+    $(window).scroll(function () {
+        allOnScrollEvents();
+    })
+    // Burger menu animation ↓
+    $('.menu-btn').on('click', function () {
+        $(this).toggleClass('open');
+        $('.side-menu').toggleClass('side-menu-open');
+        $('.side-menu li').toggleClass('side-menu-li-background');
+    })
+    // Close menu button burger and fade out side menu on nav item click ↓
+    $('aside a').on('click', function () {
+        $('.menu-btn').removeClass('open');
+        $('.side-menu').removeClass('side-menu-open');
+        $('.side-menu li').removeClass('side-menu-li-background');
     })
     // Getting current age for info section ↓
     var birth = new Date(1997, 6, 25, 12, 20);
