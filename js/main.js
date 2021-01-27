@@ -48,16 +48,16 @@ $(document).ready(function () {
     fadeInelements();
     function rocketIconScroll(){
         if ($(this).scrollTop() > 200) {
-            $('.small-header').addClass('fixed').css({
+            $('.small-header').css({
                 'display': 'block'
             });
             $('#jump-to-top').css({
                 'transform': 'translateY(0)'
             });
         } else {
-            $('.small-header').removeClass('fixed').css({
+            $('.small-header').css({
                 'display': 'none'
-            });;
+            });
             $('#jump-to-top').css({
                 'transform': 'translateY(100px)'
             });
@@ -68,11 +68,11 @@ $(document).ready(function () {
         if ($(window).innerWidth() > 1215) {
             $('#jump-to-top').css({
                 'visibility': 'visible'
-            })
+            });
         } else {
             $('#jump-to-top').css({
                 'visibility': 'hidden'
-            })
+            });
         }
     }
     rocketIconResize();

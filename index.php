@@ -17,7 +17,7 @@
 <div class="overflow">
 
     <body>
-        <header class="small-header header" id="z-index">
+        <header class="small-header header fixed" id="z-index">
             <div class="header-container" id="top">
                 <img class="header-container-img" id="rotate-logo" src="imgs/logowhite.png" alt="logo">
                 <?php include __DIR__ . '/partials/social-icons.php'; ?>
