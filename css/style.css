@@ -330,8 +330,6 @@ header .navigation a li{
 }
 .about-me-section-img{
     filter: drop-shadow(5px 10px 18px #888888);
-    position: relative;
-    z-index: 999;
 }
 .about-me-grid img{
     width: 100%;

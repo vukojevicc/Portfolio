@@ -4,7 +4,7 @@ $(document).ready(function () {
         if ($(window).innerWidth() < 450) {
             $('#main-logo').attr('src', 'imgs/logo.png')
         } else {
-            $('#main-logo').attr('src', 'imgs/logoex1.png')
+            $('#main-logo').attr('src', 'imgs/logoex.png')
         }
     }
     logoReplace();
