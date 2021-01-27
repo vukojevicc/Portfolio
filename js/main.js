@@ -2,9 +2,9 @@ $(document).ready(function () {
     // Checking which image will be added to src attribute ↓
     function logoReplace() {
         if ($(window).innerWidth() < 450) {
-            $('#main-logo').attr('src', 'imgs/logo.png')
+            $('#main-logo').attr('src', 'imgs/logo.png');
         } else {
-            $('#main-logo').attr('src', 'imgs/logoex.png')
+            $('#main-logo').attr('src', 'imgs/logoex.png');
         }
     }
     logoReplace();
@@ -32,8 +32,21 @@ $(document).ready(function () {
         }
     }
     aboutMeSectionWidth();
-    function allOnScrollEvents() {
+    function fadeInelements() {
         var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+        $(".fade").each(function () {
+            /* Check the location of each desired element */
+            var objectBottom = $(this).offset().top + $(this).outerHeight();
+            /* If the element is completely within bounds of the window, fade it in */
+            if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                if ($(this).css("opacity") == 0) {
+                    $(this).fadeTo(700, 1);
+                }
+            }
+        });
+    }
+    fadeInelements();
+    function rocketIconScroll(){
         if ($(this).scrollTop() > 200) {
             $('.small-header').addClass('fixed').css({
                 'display': 'block'
@@ -49,19 +62,9 @@ $(document).ready(function () {
                 'transform': 'translateY(100px)'
             });
         }
-        $(".fade").each(function () {
-            /* Check the location of each desired element */
-            var objectBottom = $(this).offset().top + $(this).outerHeight();
-            /* If the element is completely within bounds of the window, fade it in */
-            if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-                if ($(this).css("opacity") == 0) {
-                    $(this).fadeTo(700, 1);
-                }
-            }
-        });
     }
-    allOnScrollEvents();
-    function rocketIcon() {
+    rocketIconScroll();
+    function rocketIconResize() {
         if ($(window).innerWidth() > 1215) {
             $('#jump-to-top').css({
                 'visibility': 'visible'
@@ -72,16 +75,17 @@ $(document).ready(function () {
             })
         }
     }
-    rocketIcon();
+    rocketIconResize();
     // All functions on resize ↓
     $(window).on('resize', function () {
         logoReplace();
         linkedinTooltip();
         aboutMeSectionWidth();
-        rocketIcon();
+        rocketIconResize();
     });
     $(window).scroll(function () {
-        allOnScrollEvents();
+        fadeInelements();
+        rocketIconScroll();
     })
     // Burger menu animation ↓
     $('.menu-btn').on('click', function () {

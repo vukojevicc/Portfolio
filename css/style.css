@@ -41,6 +41,8 @@ a{
 }
 #z-index{
     z-index: 2;
+    /* background-image: linear-gradient(to right, rgba(9, 9, 173), rgba(5, 184, 219)); */
+    background-color: var(--menu-color);
 }
 .header{
     z-index: 1;
@@ -77,7 +79,7 @@ li{
     list-style-type: none;
 }
 header .header-container-img:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 header .header-container-img{
     transition: transform 0.3s ease-in-out;
@@ -144,8 +146,8 @@ header .navigation a li{
 }
 .social-title .social-title-text{
     visibility: hidden;
-    background-color: black;
-    color: #fff;
+    background-image: var(--theme-background);
+    color: white;
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
@@ -359,14 +361,15 @@ th{
     padding-right: 10px;
 }
 .about-me-section table a{
-    color: rgb(2, 199, 2);
+    color: var(--menu-color);
 }
 #jump-to-top{
     position: fixed;
     right: 20px;
     bottom: 20px;
-    transform: translateY(100px);
     transition: all .4s ease-in-out;
+    visibility: hidden;
+    transform: translateY(100px);
 }
 #jump-to-top img{
     height: 70px;
