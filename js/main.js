@@ -32,12 +32,12 @@ $(document).ready(function () {
         }
     }
     aboutMeSectionWidth();
-    function rocketIcon(){
-        if($(window).innerWidth() > 1215){
+    function rocketIcon() {
+        if ($(window).innerWidth() > 1215) {
             $('#jump-to-top').css({
                 'visibility': 'visible'
             })
-        }else{
+        } else {
             $('#jump-to-top').css({
                 'visibility': 'hidden'
             })
@@ -78,10 +78,9 @@ $(document).ready(function () {
         $('.side-menu').removeClass('side-menu-open');
         $('.side-menu li').removeClass('side-menu-li-background');
     })
-    // fade in heading for about me section ↓
+    // fade in fixed small header ↓
     $(window).scroll(function () {
         var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-        // fade in fixed small header ↓
         if ($(this).scrollTop() > 200) {
             $('.small-header').addClass('fixed');
             $('#jump-to-top').css({
@@ -109,10 +108,10 @@ $(document).ready(function () {
     var age = (new Date() - birth) / 3.154e+10;
     $('#age').html(Math.floor(age));
     // Implementing scroll animation for browsers that don't support CSS's scroll behaviour property
-    $("a").on('click', function() {
+    $("a").on('click', function () {
         var hash = this.hash;
         $('html').animate({
-          scrollTop: $(hash).offset().top
+            scrollTop: $(hash).offset().top
         }, 800, 'swing');
     });
-  });
+});

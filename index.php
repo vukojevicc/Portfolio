@@ -49,7 +49,7 @@
             </div>
         </div>
         <main>
-            <div class="main-container">
+            <div class="main-container-technologies">
                 <div class="technologies" id="technologies">
                     <div class="flex-heading">
                         <div class="technologies-heading">front end focused with <br>full stack experience</div>
@@ -72,12 +72,15 @@
                         </div>
                     </div>
                 </div>
-                <a href="#particles-js" id="jump-to-top">
-                    <img src="imgs/rocket.png" alt="jump to top">
-                </a>
-                <script src="js/particles.js"></script>
-                <script src="js/app.js"></script>
             </div>
+            <div class="carousel">
+                <?php include __DIR__ . '/partials/carousel.php'; ?>
+            </div>
+            <a href="#particles-js" id="jump-to-top">
+                <img src="imgs/rocket.png" alt="jump to top">
+            </a>
+            <script src="js/particles.js"></script>
+            <script src="js/app.js"></script>
         </main>
     </body>
 </div>
