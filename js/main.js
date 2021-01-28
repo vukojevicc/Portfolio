@@ -8,15 +8,15 @@ $(document).ready(function () {
         }
     }
     logoReplace();
-    // Checking which class will be added to linkedin social icon
-    function linkedinTooltip() {
+    // Checking which class will be added to lastItem social icon
+    function lastItemTooltip() {
         if ($(window).innerWidth() < 1169) {
-            $('.social-title-text:last-of-type').addClass('left-tooltip').removeClass('bottom-tooltip');
+            $('.small-header a:last-of-type span').addClass('left-tooltip').removeClass('bottom-tooltip');
         } else {
-            $('.social-title-text:last-of-type').addClass('bottom-tooltip').removeClass('left-tooltip');
+            $('.small-header a:last-of-type span').addClass('bottom-tooltip').removeClass('left-tooltip');
         }
     }
-    linkedinTooltip();
+    lastItemTooltip();
     // Checking which width property to asign to about me sections ↓
     function aboutMeSectionWidth() {
         if ($(window).innerWidth() > 900) {
@@ -64,24 +64,24 @@ $(document).ready(function () {
         }
     }
     rocketIconScroll();
-    function rocketIconResize() {
-        if ($(window).innerWidth() > 1215) {
-            $('#jump-to-top').css({
-                'visibility': 'visible'
-            });
-        } else {
-            $('#jump-to-top').css({
-                'visibility': 'hidden'
-            });
-        }
-    }
-    rocketIconResize();
+    // function rocketIconResize() {
+    //     if ($(window).innerWidth() > 1215) {
+    //         $('#jump-to-top').css({
+    //             'visibility': 'visible'
+    //         });
+    //     } else {
+    //         $('#jump-to-top').css({
+    //             'visibility': 'hidden'
+    //         });
+    //     }
+    // }
+    // rocketIconResize();
     // All functions on resize ↓
     $(window).on('resize', function () {
         logoReplace();
-        linkedinTooltip();
+        lastItemTooltip();
         aboutMeSectionWidth();
-        rocketIconResize();
+        // rocketIconResize();
     });
     $(window).scroll(function () {
         fadeInelements();

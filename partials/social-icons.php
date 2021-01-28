@@ -20,7 +20,7 @@
     <a href="#" target="_blank">
         <li class="social-title">
             <i class="fab fa-linkedin-in fa-2x"></i>
-            <span class="social-title-text" id="link-text">LinkedIn</span>
+            <span class="social-title-text bottom-tooltip" id="link-text">LinkedIn</span>
         </li>
     </a>
     <a href="tel:+381603388389">

@@ -6,7 +6,8 @@
     --document-width: 1100px;
     --theme-background: linear-gradient(to right, #0909ad, #05b8db);
     --menu-color: #01014b;
-    color: #777;
+    --tooltip-color: rgb(37, 36, 36);
+    color: rgb(100, 100, 100);
 }
 *{
     margin: 0;
@@ -73,6 +74,12 @@ a{
     height: 50px;
     animation: opacity_show .3s linear;
 }
+.small-header i{
+    transition: transform .1s linear;
+}
+.small-header i:hover{
+    transform: scale(1.2);
+}
 .header-container-img{
     height: inherit;
     padding: 10px;
@@ -124,7 +131,7 @@ header .navigation a li{
 }
 .social-title .social-title-text{
     visibility: hidden;
-    background-color: black;
+    background-color: var(--tooltip-color);
     color: white;
     text-align: center;
     padding: 5px 0;
@@ -134,9 +141,19 @@ header .navigation a li{
     font-size: 13px;
     z-index: 4;
     opacity: 0;
-    transition: all .3s linear;
+    transition: all .2s linear;
     font-family: sans-serif;
     width: 120px;
+}
+.social-title .social-title-text::after{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent var(--tooltip-color) transparent;
 }
 .bottom-tooltip{
     top: 100%;
@@ -345,8 +362,8 @@ th{
     position: fixed;
     right: 20px;
     bottom: 20px;
-    transition: all .4s ease-in-out;
-    visibility: hidden;
+    transition: all .2s ease-in-out;
+    /* visibility: hidden; */
     transform: translateY(100px);
 }
 #jump-to-top i{
@@ -356,7 +373,7 @@ th{
 }
 .fa-rocket{
     color: var(--menu-color);
-    transition: all .26s ease-in-out;
+    transition: all .19s ease-in-out;
 }
 .fa-rocket:hover{
     color: #0909ad;
