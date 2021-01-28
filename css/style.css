@@ -25,8 +25,10 @@
     color: white;
 }
 .main-container-technologies{
-    background-color: #f7f7f7;
-    width: 100%;
+    background-image: url('imgs/background-portfolio1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 #particles-js{
     background-image: var(--theme-background);
