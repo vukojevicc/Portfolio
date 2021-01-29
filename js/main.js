@@ -46,7 +46,7 @@ $(document).ready(function () {
         });
     }
     fadeInelements();
-    function rocketIconScroll(){
+    function rocketIconScroll() {
         if ($(this).scrollTop() > 200) {
             $('.small-header').css({
                 'display': 'block'

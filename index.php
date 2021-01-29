@@ -71,8 +71,8 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel">
-                <?php include __DIR__ . '/partials/carousel.php'; ?>
+            <div class="languages">
+                <?php include __DIR__ . '/partials/languages.php'; ?>
             </div>
             <a href="#particles-js" id="jump-to-top">
                 <i class="fas fa-rocket fa-2x"></i>

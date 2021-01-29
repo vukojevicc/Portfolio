@@ -19,7 +19,7 @@
 }
 .overflow{
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 ::selection{
     background-color: #01014b;
@@ -294,8 +294,7 @@ header .navigation a li{
     }
 }
 @media only screen and (max-width: 933px){
-    .about-me-grid{
-        flex-wrap: wrap;
+    .about-me-grid, .languages .container{
         flex-direction: column;
     }
 }
@@ -389,10 +388,6 @@ th{
 .fa-rocket:hover{
     color: #0909ad;
 }
-.carousel{
-    height: 500px;
-    background-image: var(--theme-background);
-}
 .fa-stack-overflow{
     color: orange;
 }
@@ -407,4 +402,27 @@ th{
 }
 .fa-linkedin-in{
     color: lightblue;
+}
+.languages{
+    background-image: var(--theme-background);
+}
+.languages .container{
+    max-width: var(--document-width);
+    margin: auto;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.card{
+    width: 25%;
+    height: 100%;
+    margin: 15px;
+    background-color: rgba(255, 255, 255, 0.836);
+}
+.card h2{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
 }
