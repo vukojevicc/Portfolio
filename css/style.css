@@ -428,7 +428,7 @@ th{
     text-align: center;
     transition-property: transform, box-shadow;
     transition-duration: .3s;
-    box-shadow: 0px 0px 25px 1px #000000;
+    box-shadow: 5px 5px 15px 1px rgba(0,0,0,0.39);
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -445,7 +445,7 @@ th{
     transform: skewX(45deg) translateX(500px);
     transition: .5s;
 }
-.card:hover::before{
+.touch-device-hovered::before{
     transform: skewX(45deg) translateX(-500px);
 }
 .card h2{
@@ -458,7 +458,7 @@ th{
     width: 30%;
     margin: 10px;
 }
-.card:hover {
+.touch-device-hovered {
     transform: translateY(-1.5rem) scale(1.03);
-    box-shadow: 0px 0px 25px 7px #000000;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.39);
 }

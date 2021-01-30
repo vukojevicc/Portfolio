@@ -110,4 +110,26 @@ $(document).ready(function () {
             scrollTop: $(hash).offset().top
         }, 800, 'swing');
     });
+    // enabling hover effect for cards on mobile devices
+    let touch_div = document.getElementsByClassName('card');
+    let is_touch_device = false;
+
+    if ("ontouchstart" in document.documentElement) {
+        is_touch_device = true;
+        console.log(is_touch_device)
+    }
+    for (let i = 0; i < touch_div.length; i++) {
+        if (is_touch_device) {
+            touch_div[i].addEventListener('touchstart', function () {
+                $(this).toggleClass('touch-device-hovered');
+            });
+        } else {
+            touch_div[i].addEventListener('mouseenter', function () {
+                $(this).addClass('touch-device-hovered');
+            });
+            touch_div[i].addEventListener('mouseleave', function () {
+                $(this).removeClass('touch-device-hovered');
+            });
+        }
+    }
 });
