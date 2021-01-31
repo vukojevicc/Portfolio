@@ -74,11 +74,12 @@
             <div class="languages">
                 <?php include __DIR__ . '/partials/languages.php'; ?>
             </div>
-            <a href="#particles-js" id="jump-to-top">
+            <a href="#particles-js" id="jump-to-top" class="anchor-scroll">
                 <i class="fas fa-rocket fa-2x"></i>
             </a>
             <script src="js/particles.js"></script>
             <script src="js/app.js"></script>
+            <script src="js/jquery-scroll/jquery.anchorScroll.js"></script>
         </main>
     </body>
 </div>

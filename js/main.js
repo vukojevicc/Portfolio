@@ -84,8 +84,8 @@ $(document).ready(function () {
         // rocketIconResize();
     });
     $(window).scroll(function () {
-        fadeInelements();
         rocketIconScroll();
+        fadeInelements();
     })
     // Burger menu animation ↓
     $('.menu-btn').on('click', function () {
@@ -103,20 +103,25 @@ $(document).ready(function () {
     var birth = new Date(1997, 6, 25, 12, 20);
     var age = (new Date() - birth) / 3.154e+10;
     $('#age').html(Math.floor(age));
-    // Implementing scroll animation for browsers that don't support CSS's scroll behaviour property
-    $("a").on('click', function () {
-        var hash = this.hash;
-        $('html').animate({
-            scrollTop: $(hash).offset().top
-        }, 800, 'swing');
-    });
+
+    // Implementing scroll animation for browsers that don't support CSS's scroll behaviour property with jQuery plugin ↓
+    $('.anchor-scroll').anchorScroll({
+        scrollSpeed: 800, // scroll speed
+        offsetTop: 50, // offset for fixed top bars (defaults to 0)
+        onScroll: function () { 
+          // callback on scroll start
+        },
+        scrollEnd: function () { 
+          // callback on scroll end
+        }
+     });
+
     // enabling hover effect for cards on mobile devices
     let touch_div = document.getElementsByClassName('card');
     let is_touch_device = false;
 
     if ("ontouchstart" in document.documentElement) {
         is_touch_device = true;
-        console.log(is_touch_device)
     }
     for (let i = 0; i < touch_div.length; i++) {
         if (is_touch_device) {
