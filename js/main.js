@@ -121,14 +121,14 @@ $(document).ready(function () {
     for (let i = 0; i < touch_div.length; i++) {
         if (is_touch_device) {
             touch_div[i].addEventListener('touchstart', function () {
-                $(this).toggleClass('touch-device-hovered');
+                $(this).toggleClass('touch-device-hovered-card');
             });
         } else {
             touch_div[i].addEventListener('mouseenter', function () {
-                $(this).addClass('touch-device-hovered');
+                $(this).addClass('touch-device-hovered-card');
             });
             touch_div[i].addEventListener('mouseleave', function () {
-                $(this).removeClass('touch-device-hovered');
+                $(this).removeClass('touch-device-hovered-card');
             });
         }
     }

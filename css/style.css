@@ -445,7 +445,7 @@ th{
     transform: skewX(45deg) translateX(500px);
     transition: .5s;
 }
-.touch-device-hovered::before{
+.touch-device-hovered-card::before{
     transform: skewX(45deg) translateX(-500px);
 }
 .card h2{
@@ -454,11 +454,14 @@ th{
     color: white;
     letter-spacing: 1px;
 }
-.card img{
+.card img:nth-of-type(-n+2){
     width: 30%;
     margin: 10px;
 }
-.touch-device-hovered {
+.card img:nth-of-type(3){
+    width: 70%;
+}
+.touch-device-hovered-card {
     transform: translateY(-1.5rem) scale(1.03);
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.39);
 }
