@@ -8,6 +8,8 @@
     --menu-color: #01014b;
     --tooltip-color: rgb(37, 36, 36);
     color: rgb(100, 100, 100);
+    --img-card-shadow: 5px 5px 15px rgba(0, 0, 0, 0.692);
+    --img-card-shadow-hovered: 5px 5px 15px rgba(0, 0, 0, 0.856);
 }
 *{
     margin: 0;
@@ -426,13 +428,14 @@ th{
     background-color: rgba(255, 255, 255, 0);
     padding: 10px;
     text-align: center;
-    transition-property: transform, box-shadow;
+    transition-property: transform, box-shadow, text-shadow, filter;
     transition-duration: .3s;
     box-shadow: 5px 5px 15px 1px rgba(0,0,0,0.39);
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     overflow: hidden;
+    filter: drop-shadow(var(--img-card-shadow));
 }
 .card::before{
     content: '';
@@ -453,6 +456,7 @@ th{
     padding: 10px;
     color: white;
     letter-spacing: 1px;
+    text-shadow: var(--img-card-shadow);
 }
 .card1 img{
     width: 70%;
@@ -473,6 +477,10 @@ th{
 .touch-device-hovered-card {
     transform: translateY(-1.5rem) scale(1.03);
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.39);
+    filter: drop-shadow(var(--img-card-shadow-hovered));
+}
+.touch-device-hovered-card h2{
+    text-shadow: var(--img-card-shadow-hovered);
 }
 .vertical-alignment-parent{
     display: flex;
