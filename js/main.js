@@ -107,7 +107,7 @@ $(document).ready(function () {
     // Implementing scroll animation for browsers that don't support CSS's scroll behaviour property with jQuery plugin ↓
     $('.anchor-scroll').anchorScroll({
         scrollSpeed: 800, // scroll speed
-        offsetTop: 50, // offset for fixed top bars (defaults to 0)
+        offsetTop: 40, // offset for fixed top bars (defaults to 0)
         onScroll: function () { 
           // callback on scroll start
         },
