@@ -454,14 +454,48 @@ th{
     color: white;
     letter-spacing: 1px;
 }
-.card img:nth-of-type(-n+2){
-    width: 30%;
-    margin: 10px;
-}
-.card img:nth-of-type(3){
+.card1 img{
     width: 70%;
+}
+.card1-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    align-items: center;
+}
+.js-jquery{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.js{
+    margin: 10px 0;
 }
 .touch-device-hovered-card {
     transform: translateY(-1.5rem) scale(1.03);
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.39);
+}
+.vertical-alignment-parent{
+    display: flex;
+    flex-direction: column;
+}
+.card2 img{
+    width: 100%;
+}
+.vertical-alignment{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.wp{
+    width: 60%;
+}
+.git{
+    width: 40%;
+}
+.card3 img{
+    margin: 10px 0;
+}
+.card3-flex{
+    flex-direction: column;
+    justify-content: center;
 }
