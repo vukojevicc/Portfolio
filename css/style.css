@@ -76,10 +76,10 @@ a{
     height: 50px;
     animation: opacity_show .3s linear;
 }
-.small-header i{
+.small-header li{
     transition: transform .1s linear;
 }
-.small-header i:hover{
+.small-header li:hover{
     transform: scale(1.2);
 }
 .header-container-img{
@@ -506,4 +506,7 @@ th{
 .card3-flex{
     flex-direction: column;
     justify-content: center;
+}
+.projects{
+    height: 600px;
 }
