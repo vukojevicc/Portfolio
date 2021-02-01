@@ -74,17 +74,22 @@
             <div class="languages">
                 <?php include __DIR__ . '/partials/languages.php'; ?>
             </div>
-            <div class="projects" id="projects">
+            <section class="projects" id="projects">
 
-            </div>
-            <div class="contact" id="contact">
-                <form action="logika/posaljiporuku.php" method="post">
-                    <input type="text" name="ime" placeholder="ime">
-                    <input type="email" name="email" placeholder="imejl">
-                    <textarea name="poruka" id="" cols="30" rows="10" placeholder="poruka"></textarea>
-                    <button type="submit">Posalji poruku</button>
-                </form>
-            </div>
+            </section>
+            <footer class="contact" id="contact">
+                <div class="footer-container">
+                    <form action="logika/posaljiporuku.php" method="post">
+                        <input type="text" name="ime" placeholder="ime">
+                        <input type="email" name="email" placeholder="imejl">
+                        <textarea name="poruka" id="" cols="30" rows="10" placeholder="poruka"></textarea>
+                        <button type="submit">Posalji poruku</button>
+                    </form>
+                    <p class="copyrights">
+                        2021. copyrights aleksandar &copy;. all rights reserved
+                    </p>
+                </div>
+            </footer>
             <a href="#particles-js" id="jump-to-top" class="anchor-scroll">
                 <i class="fas fa-rocket fa-2x"></i>
             </a>
