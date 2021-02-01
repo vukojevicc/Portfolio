@@ -510,3 +510,7 @@ th{
 .projects{
     height: 600px;
 }
+.contact{
+    height: 500px;
+    background-image: var(--theme-background);
+}

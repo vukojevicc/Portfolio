@@ -75,7 +75,15 @@
                 <?php include __DIR__ . '/partials/languages.php'; ?>
             </div>
             <div class="projects" id="projects">
-                                    
+
+            </div>
+            <div class="contact" id="contact">
+                <form action="logika/posaljiporuku.php" method="post">
+                    <input type="text" name="ime" placeholder="ime">
+                    <input type="email" name="email" placeholder="imejl">
+                    <textarea name="poruka" id="" cols="30" rows="10" placeholder="poruka"></textarea>
+                    <button type="submit">Posalji poruku</button>
+                </form>
             </div>
             <a href="#particles-js" id="jump-to-top" class="anchor-scroll">
                 <i class="fas fa-rocket fa-2x"></i>
