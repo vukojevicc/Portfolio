@@ -92,7 +92,7 @@ $(document).ready(function () {
         }else{
             if($(window).scrollTop() > 200){
                 $('.menu-btn').css({
-                    'display': 'none'
+                    'position': 'relative'
                 });
             }
         }

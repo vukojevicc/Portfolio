@@ -71,6 +71,8 @@ a{
 .main-header{
     background-color: var(--menu-header-background);
     text-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    position: absolute;
+    z-index: 100;
 }
 .small-header{
     height: 50px;
@@ -232,7 +234,6 @@ header .navigation a li{
     text-shadow: 0 2px 5px rgba(0, 0, 0, .2);
 }
 .menu-btn{
-    position: relative;
     display: none;
     justify-content: center;
     align-items: center;
