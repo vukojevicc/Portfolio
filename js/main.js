@@ -47,10 +47,18 @@ $(document).ready(function () {
     }
     fadeInelements();
     function rocketIconScroll() {
-        if ($(this).scrollTop() > 200) {
+        if ($(window).scrollTop() > 200) {
             $('.small-header').css({
                 'display': 'block'
             });
+            if ($(window).innerWidth() > 1215) {
+                $('.menu-btn').css({
+                    'display': 'flex',
+                    'position': 'fixed',
+                    'top': '70px',
+                    'right': '0',
+                })
+            }
             $('#jump-to-top').css({
                 'transform': 'translateY(0)'
             });
@@ -61,27 +69,41 @@ $(document).ready(function () {
             $('#jump-to-top').css({
                 'transform': 'translateY(100px)'
             });
+            $('.menu-btn').removeAttr('style').css({
+                'position': 'relative'
+            })
         }
     }
     rocketIconScroll();
-    // function rocketIconResize() {
-    //     if ($(window).innerWidth() > 1215) {
-    //         $('#jump-to-top').css({
-    //             'visibility': 'visible'
-    //         });
-    //     } else {
-    //         $('#jump-to-top').css({
-    //             'visibility': 'hidden'
-    //         });
-    //     }
-    // }
-    // rocketIconResize();
+    function burgerBtnResize() {
+        if ($(window).innerWidth() > 1215) {
+            if ($(window).scrollTop() > 200) {
+                $('.menu-btn').css({
+                    'display': 'flex',
+                    'position': 'fixed',
+                    'top': '70px',
+                    'right': '0'
+                });
+            } else {
+                $('.menu-btn').css({
+                    'position': 'relative'
+                });
+            }
+        }else{
+            if($(window).scrollTop() > 200){
+                $('.menu-btn').css({
+                    'display': 'none'
+                });
+            }
+        }
+    }
+    burgerBtnResize();
     // All functions on resize ↓
     $(window).on('resize', function () {
         logoReplace();
         lastItemTooltip();
         aboutMeSectionWidth();
-        // rocketIconResize();
+        burgerBtnResize();
     });
     $(window).scroll(function () {
         rocketIconScroll();
@@ -108,13 +130,13 @@ $(document).ready(function () {
     $('.anchor-scroll').anchorScroll({
         scrollSpeed: 800, // scroll speed
         offsetTop: 40, // offset for fixed top bars (defaults to 0)
-        onScroll: function () { 
-          // callback on scroll start
+        onScroll: function () {
+            // callback on scroll start
         },
-        scrollEnd: function () { 
-          // callback on scroll end
+        scrollEnd: function () {
+            // callback on scroll end
         }
-     });
+    });
 
     // enabling hover effect for cards on mobile devices
     let touch_div = document.getElementsByClassName('card');

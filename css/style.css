@@ -240,6 +240,8 @@ header .navigation a li{
     transition: all .5s ease-in-out;
     float: right;
     padding-right: 20px;
+    animation: opacity_show .3s linear;
+    cursor: pointer;
 }
 .menu-btn-burger{
     width: 50px;
@@ -289,7 +291,7 @@ header .navigation a li{
     .menu-btn{
         display: flex;
     }
-}
+    }
 @media only screen and (max-width: 340px){
     #email{
         display: none;
@@ -535,9 +537,12 @@ th{
     height: 600px;
 }
 .contact{
-    height: 500px;
+    height: 700px;
     clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0% 100%);
     background-image: var(--theme-background);
+    padding-top: 5vw;
+    bottom: 0;
+    position: relative;
 }
 .copyrights{
     text-align: center;
@@ -549,7 +554,22 @@ th{
     padding: 10px;
 }
 .footer-container{
-    padding-top: 5vw;
     max-width: var(--document-width);
     margin: auto;
+    position: relative;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label[for='save_data']{
+    color: white;
+}
+.about-me-section a{
+    color: var(--menu-color);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
 }

@@ -80,21 +80,35 @@
             <footer class="contact" id="contact">
                 <div class="footer-container">
                     <form action="logika/posaljiporuku.php" method="post">
-                        <input type="text" name="ime" placeholder="ime">
-                        <input type="email" name="email" placeholder="imejl">
-                        <textarea name="poruka" id="" cols="30" rows="10" placeholder="poruka"></textarea>
-                        <button type="submit">Posalji poruku</button>
+                        <div class="inputBox">
+                            <input type="text" name="ime" placeholder="ime">
+                        </div>
+                        <div class="inputBox">
+                            <input type="email" name="email" placeholder="imejl">
+                        </div>
+                        <div class="inputBox">
+                            <textarea name="poruka" id="" cols="30" rows="10" placeholder="poruka"></textarea>
+                        </div>
+                        <div class="inputBox">
+                            <label for="save_data">Save data</label>
+                            <input type="checkbox" name="save_data" id="save_data" value="true">
+                        </div>
+                        <div class="inputBox">
+                            <button type="submit">Posalji poruku</button>
+                        </div>
                     </form>
-                    <p class="copyrights">
-                        2021. copyrights aleksandar &copy;. all rights reserved
-                    </p>
                 </div>
+                <p class="copyrights">
+                    2021. copyrights aleksandar &copy;. all rights reserved
+                </p>
             </footer>
             <a href="#particles-js" id="jump-to-top" class="anchor-scroll">
                 <i class="fas fa-rocket fa-2x"></i>
             </a>
+            <!-- importing particles library -->
             <script src="js/particles.js"></script>
             <script src="js/app.js"></script>
+            <!-- importing smooth scroll jQuery plugin -->
             <script src="js/jquery-scroll/jquery.anchorScroll.js"></script>
         </main>
     </body>
