@@ -78,7 +78,7 @@
 
             </section>
             <footer class="contact" id="contact">
-                <div class="footer-container">
+                <div class="footer-container fade">
                     <form action="logika/posaljiporuku.php" method="post">
                         <div class="inputBox">
                             <input type="text" name="ime" placeholder="ime">
