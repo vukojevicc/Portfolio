@@ -80,6 +80,8 @@ $(document).ready(function () {
                 'position': 'absolute',
                 'top': '100px'
             });
+            $('.menu-btn').removeClass('open');
+            $('.side-menu').removeClass('side-menu-open');    
         }
     }
     rocketIconScroll();
@@ -131,7 +133,7 @@ $(document).ready(function () {
         $('.side-menu').toggleClass('side-menu-open');
     })
     $('html').on('click', function (event) {
-        if (!($(event.target).hasClass('menu-btn'))) {
+        if (!($(event.target).is('.menu-btn, .menu-btn-burger'))) {
             $('.menu-btn').removeClass('open');
             $('.side-menu').removeClass('side-menu-open');    
         }
