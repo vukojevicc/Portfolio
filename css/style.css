@@ -321,8 +321,6 @@ header .navigation a li{
     padding: 20px;
     text-align: center;
     transition: all .3s ease-in-out;
-}
-.side-menu-li-background{
     background: var(--menu-header-background);
 }
 .side-menu li:hover{

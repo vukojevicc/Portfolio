@@ -56,7 +56,11 @@ $(document).ready(function () {
                     'display': 'flex',
                     'position': 'fixed',
                     'top': '70px',
-                    'right': '0',
+                    'right': '0'
+                })
+                $('.side-menu').css({
+                    'position': 'fixed',
+                    'top': '150px'
                 })
             }
             $('#jump-to-top').css({
@@ -72,6 +76,10 @@ $(document).ready(function () {
             $('.menu-btn').removeAttr('style').css({
                 'position': 'relative'
             })
+            $('.side-menu').css({
+                'position': 'absolute',
+                'top': '100px'
+            });
         }
     }
     rocketIconScroll();
@@ -79,20 +87,26 @@ $(document).ready(function () {
         if ($(window).innerWidth() > 1215) {
             if ($(window).scrollTop() > 200) {
                 $('.menu-btn').css({
-                    'display': 'flex',
                     'position': 'fixed',
                     'top': '70px',
                     'right': '0'
                 });
+                $('.side-menu').css({
+                    'position': 'fixed',
+                    'top': '150px'
+                })
             } else {
                 $('.menu-btn').css({
                     'position': 'relative'
                 });
             }
-        }else{
-            if($(window).scrollTop() > 200){
+        } else {
+            if ($(window).scrollTop() > 200) {
                 $('.menu-btn').css({
                     'position': 'relative'
+                });
+                $('.side-menu').css({
+                    'position': 'absolute'
                 });
             }
         }
@@ -104,6 +118,8 @@ $(document).ready(function () {
         lastItemTooltip();
         aboutMeSectionWidth();
         burgerBtnResize();
+        rocketIconScroll();
+        fadeInelements();
     });
     $(window).scroll(function () {
         rocketIconScroll();
@@ -113,50 +129,56 @@ $(document).ready(function () {
     $('.menu-btn').on('click', function () {
         $(this).toggleClass('open');
         $('.side-menu').toggleClass('side-menu-open');
-        $('.side-menu li').toggleClass('side-menu-li-background');
     })
-    // Close menu button burger and fade out side menu on nav item click ↓
-    $('aside a').on('click', function () {
-        $('.menu-btn').removeClass('open');
-        $('.side-menu').removeClass('side-menu-open');
-        $('.side-menu li').removeClass('side-menu-li-background');
+    $('html').on('click', function (event) {
+        if (!($(event.target).hasClass('menu-btn'))) {
+            $('.menu-btn').removeClass('open');
+            $('.side-menu').removeClass('side-menu-open');    
+        }
+        console.log($(event.target));
     })
-    // Getting current age for info section ↓
-    var birth = new Date(1997, 6, 25, 12, 20);
-    var age = (new Date() - birth) / 3.154e+10;
-    $('#age').html(Math.floor(age));
+// Close menu button burger and fade out side menu on nav item click ↓
+$('aside a').on('click', function () {
+    $('.menu-btn').removeClass('open');
+    $('.side-menu').removeClass('side-menu-open');
+    $('.side-menu li').removeClass('side-menu-li-background');
+})
+// Getting current age for info section ↓
+var birth = new Date(1997, 6, 25, 12, 20);
+var age = (new Date() - birth) / 3.154e+10;
+$('#age').html(Math.floor(age));
 
-    // Implementing scroll animation for browsers that don't support CSS's scroll behaviour property with jQuery plugin ↓
-    $('.anchor-scroll').anchorScroll({
-        scrollSpeed: 800, // scroll speed
-        offsetTop: 40, // offset for fixed top bars (defaults to 0)
-        onScroll: function () {
-            // callback on scroll start
-        },
-        scrollEnd: function () {
-            // callback on scroll end
-        }
-    });
-
-    // enabling hover effect for cards on mobile devices
-    let touch_div = document.getElementsByClassName('card');
-    let is_touch_device = false;
-
-    if ("ontouchstart" in document.documentElement) {
-        is_touch_device = true;
+// Implementing scroll animation for browsers that don't support CSS's scroll behaviour property with jQuery plugin ↓
+$('.anchor-scroll').anchorScroll({
+    scrollSpeed: 800, // scroll speed
+    offsetTop: 40, // offset for fixed top bars (defaults to 0)
+    onScroll: function () {
+        // callback on scroll start
+    },
+    scrollEnd: function () {
+        // callback on scroll end
     }
-    for (let i = 0; i < touch_div.length; i++) {
-        if (is_touch_device) {
-            touch_div[i].addEventListener('touchstart', function () {
-                $(this).toggleClass('touch-device-hovered-card');
-            });
-        } else {
-            touch_div[i].addEventListener('mouseenter', function () {
-                $(this).addClass('touch-device-hovered-card');
-            });
-            touch_div[i].addEventListener('mouseleave', function () {
-                $(this).removeClass('touch-device-hovered-card');
-            });
-        }
+});
+
+// enabling hover effect for cards on mobile devices
+let touch_div = document.getElementsByClassName('card');
+let is_touch_device = false;
+
+if ("ontouchstart" in document.documentElement) {
+    is_touch_device = true;
+}
+for (let i = 0; i < touch_div.length; i++) {
+    if (is_touch_device) {
+        touch_div[i].addEventListener('touchstart', function () {
+            $(this).toggleClass('touch-device-hovered-card');
+        });
+    } else {
+        touch_div[i].addEventListener('mouseenter', function () {
+            $(this).addClass('touch-device-hovered-card');
+        });
+        touch_div[i].addEventListener('mouseleave', function () {
+            $(this).removeClass('touch-device-hovered-card');
+        });
     }
+}
 });
