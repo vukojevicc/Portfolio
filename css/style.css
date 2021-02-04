@@ -571,4 +571,8 @@ label[for='save_data']{
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: 2px;
+    transition: color .2s;
+}
+.about-me-section a:hover{
+    color: #05b8db;
 }

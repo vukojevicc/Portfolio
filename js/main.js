@@ -137,14 +137,7 @@ $(document).ready(function () {
             $('.menu-btn').removeClass('open');
             $('.side-menu').removeClass('side-menu-open');    
         }
-        console.log($(event.target));
     })
-// Close menu button burger and fade out side menu on nav item click ↓
-$('aside a').on('click', function () {
-    $('.menu-btn').removeClass('open');
-    $('.side-menu').removeClass('side-menu-open');
-    $('.side-menu li').removeClass('side-menu-li-background');
-})
 // Getting current age for info section ↓
 var birth = new Date(1997, 6, 25, 12, 20);
 var age = (new Date() - birth) / 3.154e+10;
