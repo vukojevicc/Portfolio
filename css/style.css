@@ -311,7 +311,6 @@ header .navigation a li{
     z-index: 2;
     right: 0;
     transform: translateX(100%);
-    background: transparent;
     transition: all .5s ease-in-out;
     margin: 3px 3px 0 0;
 }
@@ -321,7 +320,6 @@ header .navigation a li{
     padding: 20px;
     text-align: center;
     transition: all .3s ease-in-out;
-    background: var(--menu-header-background);
 }
 .side-menu li:hover{
     color: white;
