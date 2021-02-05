@@ -78,8 +78,8 @@
 
             </section>
             <footer class="contact" id="contact">
-            <div class="contact-heading">
-                    Contact me
+            <div class="contact-heading-container">
+                    <div class="contact-heading">Contact me</div>
                 </div>
                 <div class="footer-container fade">
                     <form action="logika/posaljiporuku.php" method="post">

@@ -534,7 +534,7 @@ th{
     height: 600px;
 }
 .contact{
-    height: 700px;
+    height: 1000px;
     clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0% 100%);
     background-image: var(--theme-background);
     padding-top: 5vw;
@@ -551,10 +551,9 @@ th{
     padding: 10px;
 }
 .footer-container{
-    max-width: var(--document-width);
+    max-width: 400px;
     margin: auto;
     position: relative;
-    width: 400px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     display: flex;
@@ -574,12 +573,15 @@ label[for='save_data']{
 .about-me-section a:hover{
     color: #05b8db;
 }
-.contact-heading{
+.contact-heading-container{
     text-align: center;
+}
+.contact-heading{
+    display: inline-block;
     color: white;
     text-shadow: var(--img-card-shadow);
     font-size: 27px;
-    padding-bottom: 20px;
+    padding: 40px 0 30px 0;
     transition-property: text-shadow, transform;
     transition-duration: .2s;
     transition-timing-function: linear;
