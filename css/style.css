@@ -534,7 +534,7 @@ th{
     height: 600px;
 }
 .contact{
-    height: 1000px;
+    height: 1200px;
     clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0% 100%);
     background-image: var(--theme-background);
     padding-top: 5vw;
@@ -547,11 +547,9 @@ th{
     color: var(--menu-color);
     position: absolute;
     bottom: 20px;
-    width: 100%;
     padding: 10px;
 }
 .footer-container{
-    max-width: 400px;
     margin: auto;
     position: relative;
     background-color: rgba(255, 255, 255, 0.2);
@@ -559,9 +557,17 @@ th{
     display: flex;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    color: var(--menu-color);
 }
-label[for='save_data']{
-    color: white;
+.footer-main{
+    max-width: 400px;
+    margin: auto;
 }
 .about-me-section a{
     color: var(--menu-color);
@@ -579,14 +585,100 @@ label[for='save_data']{
 .contact-heading{
     display: inline-block;
     color: white;
-    text-shadow: var(--img-card-shadow);
-    font-size: 27px;
-    padding: 40px 0 30px 0;
-    transition-property: text-shadow, transform;
-    transition-duration: .2s;
-    transition-timing-function: linear;
-}
-.contact-heading:hover{
-    transform: translateY(-0.3rem) scale(1.03);
     text-shadow: var(--img-card-shadow-hovered);
+    font-size: 27px;
+    padding: 40px 0 180px 0;
+    letter-spacing: 1px;
+}
+.inputBox{
+    margin: 10px 0;
+}
+input:focus,
+textarea:focus{
+    outline: none;
+}
+footer input[type='text'],
+input[type='email'],
+textarea,
+input[type='submit']{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.footer-container :not(textarea){
+    border-radius: 35px;
+}
+textarea{
+    border-radius: 20px;
+}
+input[type='submit']{
+    letter-spacing: 1px;
+    cursor: pointer;
+    width: 150px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.7);
+}
+::placeholder{
+    color: white;
+    letter-spacing: 1.2px;
+}
+.box{
+    position: relative;
+}
+.box .square{
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    animation: kockice 10s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+@keyframes kockice{
+    0%, 100%{
+        transform: translateY(-40px);
+    }
+    50%{
+        transform: translateY(40px);
+    }
+}
+.box .square:nth-child(1){
+    top: -50px;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+}
+.box .square:nth-child(2){
+    top: 150px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+}
+.box .square:nth-child(3){
+    top: 290px;
+    right: -60px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+}
+.box .square:nth-child(4){
+    top: 450px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+}
+.box .square:nth-child(5){
+    top: -80px;
+    left: 140px;
+    width: 60px;
+    height: 60px;
 }

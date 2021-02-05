@@ -78,32 +78,41 @@
 
             </section>
             <footer class="contact" id="contact">
-            <div class="contact-heading-container">
+                <div class="contact-heading-container">
                     <div class="contact-heading">Contact me</div>
                 </div>
-                <div class="footer-container fade">
-                    <form action="logika/posaljiporuku.php" method="post">
-                        <div class="inputBox">
-                            <input type="text" name="ime" placeholder="ime">
-                        </div>
-                        <div class="inputBox">
-                            <input type="email" name="email" placeholder="imejl">
-                        </div>
-                        <div class="inputBox">
-                            <textarea name="poruka" id="" cols="30" rows="10" placeholder="poruka"></textarea>
-                        </div>
-                        <div class="inputBox">
-                            <label for="save_data">Save data</label>
-                            <input type="checkbox" name="save_data" id="save_data" value="true">
-                        </div>
-                        <div class="inputBox">
-                            <button type="submit">Posalji poruku</button>
-                        </div>
-                    </form>
+                <div class="footer-main">
+                    <div class="box">
+                        <div class="square" style="--i:0;"></div>
+                        <div class="square" style="--i:1;"></div>
+                        <div class="square" style="--i:2;"></div>
+                        <div class="square" style="--i:3;"></div>
+                        <div class="square" style="--i:4;"></div>
+                    </div>
+                    <div class="footer-container fade">
+                        <form action="logika/posaljiporuku.php" method="post">
+                            <div class="inputBox">
+                                <input type="text" name="ime" placeholder="Name">
+                            </div>
+                            <div class="inputBox">
+                                <input type="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="inputBox">
+                                <textarea name="poruka" id="" cols="30" rows="10" placeholder="Leave a message!"></textarea>
+                            </div>
+                            <div class="inputBox">
+                                <label for="save_data">Save data</label>
+                                <input type="checkbox" name="save_data" id="save_data" value="true">
+                            </div>
+                            <div class="inputBox">
+                                <input type="submit" value="Send message">
+                            </div>
+                        </form>
+                    </div>
+                    <p class="copyrights">
+                        2021. copyrights aleksandar &copy;. all rights reserved
+                    </p>
                 </div>
-                <p class="copyrights">
-                    2021. copyrights aleksandar &copy;. all rights reserved
-                </p>
             </footer>
             <a href="#particles-js" id="jump-to-top" class="anchor-scroll">
                 <i class="fas fa-rocket fa-2x"></i>
