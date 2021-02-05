@@ -574,3 +574,17 @@ label[for='save_data']{
 .about-me-section a:hover{
     color: #05b8db;
 }
+.contact-heading{
+    text-align: center;
+    color: white;
+    text-shadow: var(--img-card-shadow);
+    font-size: 27px;
+    padding-bottom: 20px;
+    transition-property: text-shadow, transform;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+}
+.contact-heading:hover{
+    transform: translateY(-0.3rem) scale(1.03);
+    text-shadow: var(--img-card-shadow-hovered);
+}
