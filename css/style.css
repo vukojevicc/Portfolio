@@ -558,6 +558,7 @@ th{
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     box-shadow: 0 25px 45px rgba(0, 0, 0, .1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
@@ -628,6 +629,18 @@ label[for='save_data'],
 input[type='checkbox']{
     cursor: pointer;
 }
+label[for='save_data']{
+    margin-right: 10px;
+}
+input[type='checkbox']{
+    width: 20px;
+    height: 20px;
+}
+.checkbox-flex{
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+}
 ::placeholder{
     color: white;
     letter-spacing: 1.2px;
@@ -638,6 +651,7 @@ input[type='checkbox']{
 .box .square{
     position: absolute;
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     box-shadow: 0 25px 45px rgba(0, 0, 0, .1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
