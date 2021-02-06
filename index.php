@@ -100,12 +100,14 @@
                             <div class="inputBox">
                                 <textarea name="poruka" id="" cols="30" rows="10" placeholder="Leave a message!"></textarea>
                             </div>
-                            <div class="inputBox">
-                                <label for="save_data">Save data</label>
+                            <div class="inputBox checkbox-flex">
+                                <label for="save_data">Remember me</label>
                                 <input type="checkbox" name="save_data" id="save_data" value="true">
                             </div>
                             <div class="inputBox">
-                                <input type="submit" value="Send message">
+                                <div class="submit-hover">
+                                    <input type="submit" value="Send message" class="input-button">
+                                </div>
                             </div>
                         </form>
                     </div>

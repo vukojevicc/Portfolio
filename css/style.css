@@ -619,9 +619,14 @@ textarea{
 input[type='submit']{
     letter-spacing: 1px;
     cursor: pointer;
-    width: 150px;
     font-weight: 600;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0);
+    transition: ease-out .3s;
+    border: 1px solid var(--menu-color);
+}
+label[for='save_data'],
+input[type='checkbox']{
+    cursor: pointer;
 }
 ::placeholder{
     color: white;
@@ -681,4 +686,42 @@ input[type='submit']{
     left: 140px;
     width: 60px;
     height: 60px;
+}
+.submit-hover::after{
+    content: '';
+    width: 10px;
+    height: 100%;
+    left: 50%;
+    background-color: var(--menu-color);
+    position: absolute;
+    transition: all .3s ease-out;
+    border-radius: 0 35px 35px 0;
+    opacity: 0;
+}
+.submit-hover::before{
+    content: '';
+    width: 10px;
+    height: 100%;
+    right: 50%;
+    background-color: var(--menu-color);
+    position: absolute;
+    transition: all .3s ease-out;
+    border-radius: 35px 0 0 35px;
+    opacity: 0;
+}
+.submit-hover::after,
+.submit-hover::before{
+    z-index: -1;
+}
+.submit-hover:hover::after,
+.submit-hover:hover::before{
+    width: 50%;
+    opacity: 1;
+}
+.input-button:hover{
+    color: white;
+}
+.submit-hover{
+    position: relative;
+    width: 150px;
 }
