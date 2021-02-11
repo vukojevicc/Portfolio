@@ -13,13 +13,13 @@ $(document).ready(function () {
         $.ajax({
             "url": url,
             "method": method,
-            "dataType": "json",
             "data": {
                 "ime": ime,
                 "email": email,
                 "poruka": poruka,
                 "submit": submit
             },
+            "dataType": "json",
             "success": function (response) {
                 wrapper.css({
                     'padding':'10px'
@@ -45,7 +45,34 @@ $(document).ready(function () {
         });
     });
     // Setting cookie via AJAX ↓
-    
+    $('#save_data').on('click', function(){
+        var urlsetcookie = 'logika/postavikolacic.php';
+        var urldeletecookie = 'logika/obrisikolacic.php';
+        var method = 'post';
+        var name = $('form').find('input[name="ime"]');
+        var email = $('form').find('input[name="email"]');
+        if($(this).is(':checked')){
+        $.ajax({
+            'url':urlsetcookie,
+            'method':method,
+            'data':{
+                'name':name.val(),
+                'email':email.val()
+            },
+            'error':function(response){
+                alert('setcookie error');
+                console.log(response);
+            }
+        })
+    }else{
+        $.ajax({
+            'url':urldeletecookie,
+            'error':function(){
+                alert('deletecookie error');
+            }
+        })
+    }
+    })
     // Checking which image will be added to src attribute ↓
     function logoReplace() {
         if ($(window).innerWidth() < 450) {

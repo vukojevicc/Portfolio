@@ -92,10 +92,10 @@
                     <div class="footer-container fade">
                         <form method="post" action="logika/posaljiporuku.php">
                             <div class="inputBox">
-                                <input type="text" name="ime" placeholder="Name">
+                                <input type="text" name="ime" placeholder="Name" value="<?php if(isset($_COOKIE['name'])){ echo $_COOKIE['name'];} ?>">
                             </div>
                             <div class="inputBox">
-                                <input type="text" name="email" placeholder="Email">
+                                <input type="text" name="email" placeholder="Email" value="<?php if(isset($_COOKIE['email'])){ echo $_COOKIE['email'];} ?>">
                             </div>
                             <div class="inputBox">
                                 <textarea name="poruka" cols="30" rows="10" placeholder="Leave a message!"></textarea>
@@ -104,7 +104,9 @@
                             </div>
                             <div class="inputBox checkbox-flex">
                                 <label for="save_data">Remember me</label>
-                                <input type="checkbox" name="save_data" id="save_data" value="true">
+                                <input type="checkbox" name="save_data" id="save_data" <?php if(isset($_COOKIE['name']) || isset($_COOKIE['email'])){
+                                    echo 'checked';
+                                } ?>>
                             </div>
                             <div class="inputBox">
                                 <div class="submit-hover">
