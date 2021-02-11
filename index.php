@@ -104,9 +104,7 @@
                             </div>
                             <div class="inputBox checkbox-flex">
                                 <label for="save_data">Remember me</label>
-                                <input type="checkbox" name="save_data" id="save_data" <?php if(isset($_COOKIE['name']) || isset($_COOKIE['email'])){
-                                    echo 'checked';
-                                } ?>>
+                                <input type="checkbox" name="save_data" id="save_data">
                             </div>
                             <div class="inputBox">
                                 <div class="submit-hover">
