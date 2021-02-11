@@ -10,10 +10,10 @@
         <?php require_once __DIR__ . '/css/style.css' ?>
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/6daab8fd44.js" crossorigin="anonymous"></script>
     <script>
         <?php require_once __DIR__ . '/js/main.js'; ?>
     </script>
-    <script src="https://kit.fontawesome.com/6daab8fd44.js" crossorigin="anonymous"></script>
 </head>
 <div class="overflow">
 
@@ -90,15 +90,17 @@
                         <div class="square" style="--i:4;"></div>
                     </div>
                     <div class="footer-container fade">
-                        <form action="logika/posaljiporuku.php" method="post">
+                        <form method="post" action="logika/posaljiporuku.php">
                             <div class="inputBox">
                                 <input type="text" name="ime" placeholder="Name">
                             </div>
                             <div class="inputBox">
-                                <input type="email" name="email" placeholder="Email">
+                                <input type="text" name="email" placeholder="Email">
                             </div>
                             <div class="inputBox">
-                                <textarea name="poruka" id="" cols="30" rows="10" placeholder="Leave a message!"></textarea>
+                                <textarea name="poruka" cols="30" rows="10" placeholder="Leave a message!"></textarea>
+                            </div>
+                            <div id="error-wrapper">
                             </div>
                             <div class="inputBox checkbox-flex">
                                 <label for="save_data">Remember me</label>
@@ -106,7 +108,7 @@
                             </div>
                             <div class="inputBox">
                                 <div class="submit-hover">
-                                    <input type="submit" value="Send message" class="input-button">
+                                    <input type="submit" name="submit" value="Send message" class="input-button">
                                 </div>
                             </div>
                         </form>

@@ -1,4 +1,51 @@
 $(document).ready(function () {
+    // sending message via AJAX ↓
+    $('form').on('submit', function (event) {
+        event.preventDefault();
+        var url = $(this).attr('action');
+        var method = $(this).attr('method');
+        var ime = $(this).find('input[name="ime"]').val();
+        var email = $(this).find('input[name="email"]').val();
+        var poruka = $(this).find('textarea[name="poruka"]').val();
+        var submit = $(this).find('input[name="submit"]').val();
+        var wrapper = $(this).find('#error-wrapper');
+        wrapper.empty();
+        $.ajax({
+            "url": url,
+            "method": method,
+            "dataType": "json",
+            "data": {
+                "ime": ime,
+                "email": email,
+                "poruka": poruka,
+                "submit": submit
+            },
+            "success": function (response) {
+                wrapper.css({
+                    'padding':'10px'
+                });
+                if(response.success){
+                    wrapper.css({
+                        'border':'1px solid green',
+                        'background-color':'rgba(0, 255, 0, 0.3)'
+                    })
+                }else{
+                    wrapper.css({
+                        'border':'1px solid red',
+                        'background-color':'rgba(255, 0, 0, 0.3)'
+                    })
+                }
+                for(message in response){
+                    wrapper.append(response[message] + '<br>');
+                }
+            },
+            "error": function () {
+                alert('error');
+            }
+        });
+    });
+    // Setting cookie via AJAX ↓
+    
     // Checking which image will be added to src attribute ↓
     function logoReplace() {
         if ($(window).innerWidth() < 450) {
@@ -81,7 +128,7 @@ $(document).ready(function () {
                 'top': '100px'
             });
             $('.menu-btn').removeClass('open');
-            $('.side-menu').removeClass('side-menu-open');    
+            $('.side-menu').removeClass('side-menu-open');
         }
     }
     rocketIconScroll();
@@ -135,45 +182,45 @@ $(document).ready(function () {
     $('html').on('click', function (event) {
         if (!($(event.target).is('.menu-btn, .menu-btn-burger'))) {
             $('.menu-btn').removeClass('open');
-            $('.side-menu').removeClass('side-menu-open');    
+            $('.side-menu').removeClass('side-menu-open');
         }
     })
-// Getting current age for info section ↓
-var birth = new Date(1997, 6, 25, 12, 20);
-var age = (new Date() - birth) / 3.154e+10;
-$('#age').html(Math.floor(age));
+    // Getting current age for info section ↓
+    var birth = new Date(1997, 6, 25, 12, 20);
+    var age = (new Date() - birth) / 3.154e+10;
+    $('#age').html(Math.floor(age));
 
-// Implementing scroll animation for browsers that don't support CSS's scroll behaviour property with jQuery plugin ↓
-$('.anchor-scroll').anchorScroll({
-    scrollSpeed: 800, // scroll speed
-    offsetTop: 40, // offset for fixed top bars (defaults to 0)
-    onScroll: function () {
-        // callback on scroll start
-    },
-    scrollEnd: function () {
-        // callback on scroll end
+    // Implementing scroll animation for browsers that don't support CSS's scroll behaviour property with jQuery plugin ↓
+    $('.anchor-scroll').anchorScroll({
+        scrollSpeed: 800, // scroll speed
+        offsetTop: 40, // offset for fixed top bars (defaults to 0)
+        onScroll: function () {
+            // callback on scroll start
+        },
+        scrollEnd: function () {
+            // callback on scroll end
+        }
+    });
+
+    // enabling hover effect for cards on mobile devices
+    let touch_div = document.getElementsByClassName('card');
+    let is_touch_device = false;
+
+    if ("ontouchstart" in document.documentElement) {
+        is_touch_device = true;
     }
-});
-
-// enabling hover effect for cards on mobile devices
-let touch_div = document.getElementsByClassName('card');
-let is_touch_device = false;
-
-if ("ontouchstart" in document.documentElement) {
-    is_touch_device = true;
-}
-for (let i = 0; i < touch_div.length; i++) {
-    if (is_touch_device) {
-        touch_div[i].addEventListener('touchstart', function () {
-            $(this).toggleClass('touch-device-hovered-card');
-        });
-    } else {
-        touch_div[i].addEventListener('mouseenter', function () {
-            $(this).addClass('touch-device-hovered-card');
-        });
-        touch_div[i].addEventListener('mouseleave', function () {
-            $(this).removeClass('touch-device-hovered-card');
-        });
+    for (let i = 0; i < touch_div.length; i++) {
+        if (is_touch_device) {
+            touch_div[i].addEventListener('touchstart', function () {
+                $(this).toggleClass('touch-device-hovered-card');
+            });
+        } else {
+            touch_div[i].addEventListener('mouseenter', function () {
+                $(this).addClass('touch-device-hovered-card');
+            });
+            touch_div[i].addEventListener('mouseleave', function () {
+                $(this).removeClass('touch-device-hovered-card');
+            });
+        }
     }
-}
 });

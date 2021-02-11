@@ -739,3 +739,10 @@ input[type='checkbox']{
     position: relative;
     width: 150px;
 }
+form{
+    max-width: 250.8px;
+}
+#error-wrapper{
+    color: white;
+    border-radius: 0;
+}
