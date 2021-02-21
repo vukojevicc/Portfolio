@@ -19,6 +19,9 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+main{
+    background-color: #f7f7f7;
+}
 .overflow{
     position: relative;
     overflow: hidden;
@@ -211,12 +214,12 @@ header .navigation a li{
     margin: auto;
     padding: 6vw 2vw 2vw 2vw;
 }
-.technologies .flex-heading{
+.flex-heading{
     display: flex;
     justify-content: center;
     margin-bottom: 37px;
 }
-.technologies .flex-heading .technologies-heading{
+.technologies-heading{
     background: var(--theme-background);
    -webkit-background-clip: text;
    background-clip: text;
@@ -229,9 +232,13 @@ header .navigation a li{
     transition: transform .1s linear;
     display: inline-block;
 }
-.technologies .flex-heading .technologies-heading:hover{
+.technologies-heading:hover{
     transform: skew(2deg, 1deg);
     text-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+.projects .technologies-heading{
+    letter-spacing: 1px;
+    padding: 30px 0;
 }
 .menu-btn{
     display: none;
@@ -304,6 +311,11 @@ header .navigation a li{
     }
     .card{
         min-width: 218px;
+    }
+}
+@media only screen and (min-width: 410px){
+    .project img{
+        width: 400px!important;
     }
 }
 .side-menu{
@@ -414,7 +426,7 @@ th{
 .languages::before,
 .languages::after{
     content: '';
-    background: white;
+    background: #f7f7f7;
     width: 50%;
     height: 50px;
     position: absolute;
@@ -531,7 +543,8 @@ th{
     justify-content: center;
 }
 .projects{
-    height: 600px;
+    background-color: #f7f7f7;
+    padding-bottom: 5vw;
 }
 .contact{
     height: 1200px;
@@ -745,4 +758,13 @@ form{
 #error-wrapper{
     color: white;
     border-radius: 0;
+}
+.project{
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 30px 0;
+}
+.project img{
+    width: 100vw;
 }

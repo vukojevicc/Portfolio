@@ -75,7 +75,9 @@
                 <?php include __DIR__ . '/partials/languages.php'; ?>
             </div>
             <section class="projects" id="projects">
-
+                <div class="flex-heading"><div class="technologies-heading">some of my projects</div></div>
+                <a href="https://mihabodytec-batajnica.rs/" target="_blank" class="project fade"><img src="imgs/maciphonemiha.png" alt="project1"></a>
+                <a href="http://dubinskopranjezemun.com/" target="_blank" class="project fade"><img src="imgs/dubinskosve.png" alt="project2"></a>
             </section>
             <footer class="contact" id="contact">
                 <div class="contact-heading-container">
@@ -92,10 +94,14 @@
                     <div class="footer-container fade">
                         <form method="post" action="logika/posaljiporuku.php">
                             <div class="inputBox">
-                                <input type="text" name="ime" placeholder="Name" value="<?php if(isset($_COOKIE['name'])){ echo $_COOKIE['name'];} ?>">
+                                <input type="text" name="ime" placeholder="Name" value="<?php if (isset($_COOKIE['name'])) {
+                                                                                            echo $_COOKIE['name'];
+                                                                                        } ?>">
                             </div>
                             <div class="inputBox">
-                                <input type="text" name="email" placeholder="Email" value="<?php if(isset($_COOKIE['email'])){ echo $_COOKIE['email'];} ?>">
+                                <input type="text" name="email" placeholder="Email" value="<?php if (isset($_COOKIE['email'])) {
+                                                                                                echo $_COOKIE['email'];
+                                                                                            } ?>">
                             </div>
                             <div class="inputBox">
                                 <textarea name="poruka" cols="30" rows="10" placeholder="Leave a message!"></textarea>
